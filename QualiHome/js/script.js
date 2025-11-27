@@ -4,6 +4,6 @@ function continuar() {
     if (email === "") {
         alert("Por favor, digite um e-mail.");
     } else {
-        alert("E-mail enviado: " + email);
+        window.location.href = "home.html";
     }
 }
