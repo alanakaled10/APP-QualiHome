@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QualiHome - Assistência</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Global (Compartilhado com a Home) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="camera-page"> <!-- Adicionei uma classe para ajudar no CSS específico -->
+
+<div class="mobile-container container-camera">
+
+    <!-- ========== OVERLAY DE CÂMERA (Visível por padrão) ========== -->
+    <div id="camera-overlay">
+        <div class="camera-header-controls">
+            <!-- VOLTAR PARA INDEX.HTML -->
+            <i class="fa-solid fa-xmark" style="font-size: 24px; cursor: pointer; color: white;" onclick="window.location.href='index.html'"></i>
+            <i class="fa-solid fa-bolt" style="font-size: 20px; color: white;"></i>
+        </div>
+        
+        <div class="camera-viewfinder">
+            <div class="scan-line"></div>
+            <div class="camera-corners">
+                <div class="corner tl"></div><div class="corner tr"></div>
+                <div class="corner bl"></div><div class="corner br"></div>
+            </div>
+            <p class="camera-instruction">
+                Aponte para o problema ou QR Code
+            </p>
+        </div>
+        
+        <div class="camera-footer-controls">
+            <i class="fa-regular fa-image" style="color: white; font-size: 24px;"></i>
+            <button class="shutter-btn" onclick="takePhoto()"></button>
+            <i class="fa-solid fa-rotate" style="color: white; font-size: 24px;"></i>
+        </div>
+    </div>
+
+    <!-- ========== TELA RESULTADO IA ========== -->
+    <div id="result-screen">
+        <div class="header-content result-header">
+            <div style="font-size: 18px; font-weight: bold;">Análise da IA</div>
+            <div style="color: #00c7a5; font-size: 14px; font-weight: bold;">
+                <i class="fa-solid fa-check"></i> Concluído
+            </div>
+        </div>
+
+        <div id="ai-loader" class="loader-overlay" style="display: none;">
+            <div class="spinner"></div>
+            <p style="margin-top: 15px; color: #666; font-size: 14px;">A IA está analisando...</p>
+        </div>
+
+        <div class="diagnosis-card">
+            <div class="icon-diagnosis"><i class="fa-solid fa-droplet"></i></div>
+            <div class="card-title">Infiltração Detectada</div>
+            <div class="card-desc">Parede da Sala de Estar</div>
+
+            <div class="warranty-check">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span style="font-size:13px; font-weight:bold;">Status da Garantia</span>
+                    <span class="badge-active">ATIVA</span>
+                </div>
+                <div style="font-size: 12px; color: #00796b;">Vence em 20 dias</div>
+            </div>
+
+            <button class="btn-request" onclick="goHome()">Solicitar Visita Técnica</button>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="btn-back" onclick="goHome()">
+                Voltar para Início
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    const cameraOverlay = document.getElementById('camera-overlay');
+    const resultScreen = document.getElementById('result-screen');
+    const aiLoader = document.getElementById('ai-loader');
+
+    function takePhoto() {
+        // Efeito de Flash
+        const flash = document.createElement('div');
+        flash.style.cssText = 'position:fixed; top:0; left:0; width:100%; height:100%; background:white; z-index:2000;';
+        document.body.appendChild(flash);
+        setTimeout(() => flash.remove(), 100);
+
+        setTimeout(() => {
+            // Esconde Câmera e Mostra Resultado
+            cameraOverlay.style.display = 'none';
+            resultScreen.style.display = 'flex';
+            aiLoader.style.display = 'flex';
+            
+            // Simula IA pensando
+            setTimeout(() => {
+                aiLoader.style.display = 'none';
+            }, 2000);
+        }, 300);
+    }
+
+    function goHome() {
+        window.location.href = 'home.html';
+    }
+</script>
+
+</body>
+</html>

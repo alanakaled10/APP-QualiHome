@@ -31,3 +31,9 @@ document.querySelectorAll('.menu-item').forEach(item => {
     });
 });
 
+let btn_ia = document.querySelector(".btn_ia");
+
+btn_ia.addEventListener('click', function () {
+    window.location.href = "scan.html";
+})
+
