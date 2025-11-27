@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QualiHome - Abrir Chamado</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chamado.css">
+</head>
+<body class="body_chamado">
+
+<div class="mobile-container">
+
+    <div class="header">
+        <button class="btn-back" onclick="goHome()">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <h2 id="h2_chamado">Abrir Chamado</h2>
+    </div>
+
+    <div class="content-body">
+        
+        <div class="recipient-card">
+            <div class="icon-box">
+                <i class="fa-solid fa-building"></i>
+            </div>
+            <div>
+                <p class="label-text">Enviando para:</p>
+                <strong>Construtora QualiHome</strong>
+            </div>
+        </div>
+
+        <form id="formChamado">
+            
+            <label class="form-label">Qual o tipo de chamado?</label>
+            <div class="chip-group">
+                <div class="chip active" onclick="selecionarTipo(this)">Solicitação</div>
+                <div class="chip" onclick="selecionarTipo(this)">Problema</div>
+                <div class="chip" onclick="selecionarTipo(this)">Dúvida</div>
+            </div>
+
+            <div class="input-group">
+                <label class="form-label">Procedimento / Categoria</label>
+                <select class="styled-input">
+                    <option value="" disabled selected>Selecione o assunto...</option>
+                    <option value="eletrica">Instalações Elétricas</option>
+                    <option value="hidraulica">Hidráulica / Vazamentos</option>
+                    <option value="alvenaria">Rachaduras / Paredes</option>
+                    <option value="outro">Outros</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label class="form-label">Descrição</label>
+                <textarea class="styled-input textarea-input" placeholder="Descreva o que está acontecendo..."></textarea>
+            </div>
+
+            <div class="input-group">
+                <input type="file" id="inputFoto" style="display: none;" onchange="atualizarNomeFoto()">
+                
+                <div class="btn-upload" onclick="document.getElementById('inputFoto').click()">
+                    <i class="fa-solid fa-camera"></i>
+                    <span id="textoFoto">Adicionar foto ou anexo</span>
+                </div>
+            </div>
+
+            <button type="button" class="btn-submit" onclick="alert('Chamado enviado com sucesso!')">
+                Enviar Chamado
+            </button>
+        </form>
+
+        <hr class="divider">
+
+        <div class="history-section">
+            <h3>Meus Chamados</h3>
+            
+            <div class="ticket-item">
+                <div class="status-dot green"></div> <div class="ticket-info">
+                    <h4>Vazamento na Pia</h4>
+                    <p>Aberto em 20/10 • Hidráulica</p>
+                </div>
+                <div class="ticket-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+
+            <div class="ticket-item">
+                <div class="status-dot yellow"></div> <div class="ticket-info">
+                    <h4>Dúvida sobre voltagem</h4>
+                    <p>Aberto em 25/11 • Elétrica</p>
+                </div>
+                <div class="ticket-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="bottom-menu">
+        <div class="menu-item" onclick= "goHome()">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </div>
+
+        <div class="menu-item ">
+            <i class="fa-solid fa-headset"></i>
+            <span>Suporte</span>
+            
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-solid fa-book-open"></i>
+            <span>DataBook</span>
+        </div>
+
+        <div class="menu-item" onclick= "goPerfil()">
+            <i class="fa-regular fa-user"></i>
+            <span>Perfil</span> </div>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

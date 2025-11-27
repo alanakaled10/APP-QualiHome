@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QualiHome - Perfil</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+
+<div class="mobile-container">
+    >
+
+    <div class="profile-section">
+        <div class="profile-pic-wrapper" onclick="document.getElementById('upload-photo').click()">
+            <img src="https://i.pravatar.cc/300?img=45" alt="Foto de Perfil" id="profile-image">
+            
+            <div class="camera-overlay">
+                <i class="fa-solid fa-camera"></i>
+            </div>
+
+            <input type="file" id="upload-photo" hidden accept="image/*" onchange="updateProfileImage(this)">
+        </div>
+
+        <div class="profile-name-block">
+             <h3>Maria Silva</h3>
+             <i class="fa-solid fa-pen" class="edit-icon"></i>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <div class="card-icon"><i class="fa-solid fa-house-chimney"></i></div>
+        <div>
+            <h4>Dados do Imóvel</h4>
+            <p>
+                Condomínio Jardins, Bloco A<br>
+                Apt. 302 - São Paulo/SP
+            </p>
+        </div>
+    </div>
+
+    <div class="info-card warranty-card">
+        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div style="flex: 1;">
+            <h4 class="warranty-title">Prazos de Garantia</h4>
+            
+            <div style="margin-bottom: 8px;">
+                <div class="progress-label">
+                    <span>Estrutural</span> <span class="date-highlight">Dez/2028</span>
+                </div>
+                <div class="progress-bg"><div class="progress-bar structural"></div></div>
+            </div>
+            
+            <div>
+                 <div class="progress-label">
+                    <span>Instalações</span> <span class="date-highlight">Dez/2026</span>
+                </div>
+                <div class="progress-bg"><div class="progress-bar installations"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <button class="notification-btn">
+        <i class="fa-regular fa-bell"></i>
+        Notificações e Alertas
+    </button>
+
+    <div class="section-title" style="padding: 0 20px;">Configurações Gerais</div>
+    
+    <div class="settings-list">
+        <div class="settings-item">
+            <div class="item-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="item-text">Idioma</div>
+            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </div>
+        <div class="settings-item">
+            <div class="item-icon"><i class="fa-solid fa-lock"></i></div>
+            <div class="item-text">Privacidade e Segurança</div>
+            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </div>
+        <div class="settings-item">
+            <div class="item-icon"><i class="fa-solid fa-toggle-on"></i></div>
+            <div class="item-text">Permissões do App</div>
+            <i class="fa-solid fa-chevron-right arrow-icon"></i>
+        </div>
+    </div>
+
+    <button class="logout-btn">
+        <i class="fa-solid fa-arrow-right-from-bracket" onclick="logoff()"></i>
+        Sair da Conta
+    </button>
+
+    <div class="bottom-menu" onclick="goHome()">
+        <div class="menu-item ">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+            
+        </div>
+
+
+        <div class="menu-item">
+            <i class="fa-solid fa-headset"></i>
+            <span>Suporte</span>
+        </div>
+
+        <div class="menu-item">
+            <i class="fa-solid fa-book-open"></i>
+            <span>DataBook</span>
+        </div>
+
+        <div class="menu-item active-menu" onclick="goPerfil()">
+            <i class="fa-regular fa-user"></i>
+            <span>Pefíl</span>
+            <div class="menu-indicator"></div>
+        </div>
+    </div>
+
+</div>
+
+<script src="js/perfil.js"></script>
+
+</body>
+</html>
