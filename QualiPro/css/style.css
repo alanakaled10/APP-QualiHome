@@ -1,0 +1,120 @@
+/* Reset básico e fonte */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Usa Roboto se disponível, ou sans-serif padrão */
+}
+
+body {
+    background-color: #f4f7f9; /* Cor de fundo clara */
+    /* Se tiver a imagem de fundo, descomente e ajuste o caminho abaixo: */
+    /* background-image: url('caminho-para-sua-imagem-de-fundo.jpg'); background-size: cover; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container principal centralizado */
+.login-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 450px; /* Largura máxima do cartão */
+    text-align: center;
+}
+
+/* Estilos do Logotipo (simulado com texto) */
+.logo h1 {
+    color: #1a2b4c; /* Azul escuro */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.logo span {
+    color: #e67e22; /* Laranja */
+}
+
+/* Títulos */
+h2 {
+    color: #1a2b4c;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Estilos do Formulário */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #1a2b4c; /* Azul ao clicar no campo */
+}
+
+/* Link de "Esqueci minha senha" */
+.forgot-password {
+    display: block;
+    text-align: left;
+    color: #1a2b4c;
+    font-size: 13px;
+    text-decoration: underline;
+    margin-bottom: 25px;
+}
+
+/* Botão Entrar */
+.btn-login {
+    width: 100%;
+    padding: 15px;
+    background-color: #1a2b4c; /* Azul escuro do botão */
+    color: #f39c12; /* Texto laranja */
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #13203a; /* Escurece um pouco ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+footer a {
+    color: #1a2b4c;
+    text-decoration: underline;
+}
