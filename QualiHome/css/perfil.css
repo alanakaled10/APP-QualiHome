@@ -1,9 +1,6 @@
-/* ARQUIVO: css/perfil.css */
-
-/* --- Área Superior (Foto e Nome) --- */
 
 .profile-section {
-    margin-top: 300px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;

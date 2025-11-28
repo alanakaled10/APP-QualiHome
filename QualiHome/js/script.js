@@ -53,6 +53,10 @@ function goChamado() {
     window.location.href = 'chamado.html';
 }
 
+function goDatabook() {
+    window.location.href = 'databook.html';
+}
+
 function goPerfil() {
     window.location.href = 'perfil.html';
 }

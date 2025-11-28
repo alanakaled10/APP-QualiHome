@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo img {
+    width: 300px;
+}
+
+.h2_home{
+    margin-top: 10px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 93%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.divider {
+    margin: 15px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.btn-social {
+    width: 100%;
+    background: #f2f2f2;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    gap: 8px;
+}
+
+.footer-text {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #888;
+}

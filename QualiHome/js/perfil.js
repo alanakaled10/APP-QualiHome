@@ -29,3 +29,7 @@ function logoff() {
 function goHome() {
     window.location.href = 'home.html';
 }
+
+function goDatabook() {
+    window.location.href = 'databook.html';
+}
