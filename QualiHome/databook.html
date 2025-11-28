@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QualiHome App Concept</title>
+
+    <link rel="stylesheet" href="css/databook.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="phone-screen">
+
+        <header class="header">
+            <button class="btn-back" onclick="goHome()">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+        </header>
+
+        <main class="main-content">
+            <div class="video-overlay-gradient"></div>
+
+            <div class="overlay-container">
+
+                <div class="left-info">
+                    <div class="user-profile">
+                        <div class="profile-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <span class="username">QualiHome Dicas</span>
+                    </div>
+                    <p class="video-title">Dica Rápida: Como limpar o filtro do ar</p>
+                    <p class="video-description">Aprenda a manter seu ar condicionado funcionando perfeitamente! 💡</p>
+                </div>
+
+                <div class="right-actions">
+                    <div class="action-item">
+                        <div class="action-icon-circle">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <span class="action-count">1.2k</span>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon-circle">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </div>
+                        <span class="action-count">89</span>
+                    </div>
+                    <div class="action-item">
+                        <div class="action-icon-circle">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <span class="action-count">34</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill"></div>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <div class="nav-item active" onclick="selecionarMenu(this)">
+                <div class="nav-img-container">
+                    <img src="https://tuacasa.uol.com.br/wp-content/uploads/2019/01/cozinha-em-l-75.jpg" alt="Cozinha">
+                </div>
+                <span class="nav-label">Cozinha</span>
+            </div>
+            <div class="nav-item" onclick="selecionarMenu(this)">
+                <div class="nav-img-container">
+                    <img src="https://i.pinimg.com/474x/bf/e6/62/bfe662f1b52fdd801efb935823bbe7de.jpg" alt="Banheiro">
+                </div>
+                <span class="nav-label">Banheiro</span>
+            </div>
+            <div class="nav-item" onclick="selecionarMenu(this)">
+                <div class="nav-img-container">
+                    <img src="https://tuacasa.uol.com.br/wp-content/uploads/2020/02/lavanderia-planejada-capa.jpg" alt="Lavanderia">
+                </div>
+                <span class="nav-label">Lavanderia</span>
+            </div>
+            <div class="nav-item" onclick="selecionarMenu(this)">
+                <div class="nav-img-container">
+                    <img src="https://finger.ind.br/wp-content/uploads/2019/05/10-dicas-para-acertar-na-decoracao-do-seu-quarto-com-closet.jpg" alt="Quarto">
+                </div>
+                <span class="nav-label">Quarto</span>
+            </div>
+            <div class="nav-item" onclick="selecionarMenu(this)">
+                <div class="nav-img-container">
+                    <img src="https://images.homify.com/v1440274245/p/photo/image/593076/Designer_de_Interiores_e_Paisagista_Iara_K_laris_Projeto_de_Interiores_Swiss_Park_2__3_.jpg" alt="Sala">
+                </div>
+                <span class="nav-label">Sala</span>
+            </div>
+        </nav>
+
+    </div>
+
+    <script src="js/databook.js"></script>
+
+</body>
+
+</html>

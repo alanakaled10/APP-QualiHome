@@ -1,0 +1,202 @@
+/* --- CSS Básico (Estilos) --- */
+
+/* Reset básico para tirar margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Garante que ocupa a altura total da tela */
+}
+
+.btn-back {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #f7f0f0;
+}
+
+
+.phone-screen {
+    width: 100%; 
+    height: 750px; 
+    background-color: #1a1a1a; 
+    border-radius: 30px; 
+    position: relative;
+    display: flex;
+    flex-direction: column; 
+}
+
+/* --- Cabeçalho Superior --- */
+.header {
+    padding: 20px;
+    color: #00b894; /* A cor verde-azulado do seu design */
+    font-weight: bold;
+    height: 50px;
+}
+
+/* --- Área Principal (O "Vídeo") --- */
+.main-content {
+    flex-grow: 1; 
+    position: relative; 
+    background-image: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Camada escura para melhorar a leitura do texto branco sobre o vídeo */
+.video-overlay-gradient {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* Gradiente de baixo para cima, escurecendo a parte inferior */
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%);
+}
+
+/* --- Elementos Flutuantes sobre o vídeo --- */
+.overlay-container {
+    position: absolute;
+    bottom: 20px; /* Fica próximo ao rodapé da área do vídeo */
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Separa o conteúdo da esquerda e da direita */
+    align-items: flex-end; /* Alinha os itens pela parte de baixo */
+    color: white;
+}
+
+/* Lado Esquerdo (Texto e Perfil) */
+.left-info {
+    max-width: 75%; /* Limita a largura para não bater nos ícones da direita */
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #00b894;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.video-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.video-description {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Lado Direita (Ícones de ação estilo TikTok) */
+.right-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espaço entre os conjuntos de ícones */
+}
+
+.action-item {
+    text-align: center;
+}
+
+.action-icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.1); /* Fundo transparente sutil */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 5px;
+    border: 2px solid white;
+}
+
+.action-count {
+    font-size: 12px;
+}
+
+/* Barra de progresso do vídeo (Visual apenas) */
+.progress-bar-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255,255,255,0.3);
+}
+.progress-bar-fill {
+    width: 40%; /* Exemplo: 40% do vídeo assistido */
+    height: 100%;
+    background-color: #00b894;
+}
+
+
+/* --- Navegação Inferior (Menu Salas) --- */
+.bottom-nav {
+    background-color: #1a1a1a;
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-around; /* Distribui os ícones igualmente na largura */
+    border-top: 1px solid #333; /* Linha sutil separando do vídeo */
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.6; /* Ícones inativos ficam um pouco apagados */
+    transition: 0.3s; /* Suaviza a mudança de cor ao clicar */
+}
+
+/* Estados Ativos (quando a classe .active é adicionada pelo JS) */
+.nav-item.active {
+    opacity: 1;
+}
+/* Adiciona a borda verde apenas na imagem do item ativo */
+.nav-item.active .nav-img-container {
+     border: 3px solid #00b894;
+}
+
+.nav-img-container {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%; /* Transforma o quadrado em círculo */
+    overflow: hidden; /* Garante que a imagem não saia do círculo */
+    border: 3px solid #444; /* Borda cinza padrão (inativo) */
+    margin-bottom: 5px;
+}
+
+.nav-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o círculo sem distorcer */
+}
+
+.nav-label {
+    color: white;
+    font-size: 12px;
+}
