@@ -26,10 +26,15 @@ function updateProfileImage(input) {
 function logoff() {
     window.location.href = 'index.html';
 }
+
 function goHome() {
     window.location.href = 'home.html';
 }
 
 function goDatabook() {
     window.location.href = 'databook.html';
+}
+
+function goSuport() {
+    window.location.href = 'suport.html';
 }

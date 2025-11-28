@@ -1,0 +1,217 @@
+/* ARQUIVO: css/suporte.css */
+
+/* Ajuste do container para ocupar altura total sem rolagem externa */
+.chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #e5ddd5; /* Cor de fundo estilo WhatsApp */
+    background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)); /* Suaviza o fundo */
+}
+
+/* --- HEADER DO CHAT --- */
+.chat-header {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    z-index: 20;
+}
+
+.btn-back, .btn-options {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+.agent-info {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.agent-avatar {
+    width: 40px;
+    height: 40px;
+    background-color: #00c7a5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+}
+
+.online-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #25d366; /* Verde online */
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.agent-text h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #111;
+}
+
+.agent-text span {
+    font-size: 12px;
+    color: #00c7a5;
+    font-weight: 500;
+}
+
+/* --- ÁREA DE MENSAGENS (Scroll) --- */
+.chat-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Divisor de Data */
+.date-divider {
+    text-align: center;
+    margin: 10px 0;
+}
+.date-divider span {
+    background-color: #f0f2f5;
+    color: #54656f;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 11px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Bolhas de Mensagem */
+.message {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.msg-bubble {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.msg-time {
+    font-size: 10px;
+    margin-top: 4px;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4px;
+    opacity: 0.7;
+}
+
+/* Estilo Recebido (Esquerda - Branco) */
+.received {
+    justify-content: flex-start;
+}
+.received .msg-bubble {
+    background-color: #ffffff;
+    color: #111;
+    border-top-left-radius: 0;
+}
+
+/* Estilo Enviado (Direita - Verde) */
+.sent {
+    justify-content: flex-end;
+}
+.sent .msg-bubble {
+    background-color: #e0fcf6; /* Verde bem claro, quase branco, estilo WhatsApp moderno */
+    color: #111;
+    border-top-right-radius: 0;
+}
+
+/* Se quiser o estilo "QualiHome Sólido" para msg enviada, use:
+.sent .msg-bubble {
+    background-color: #00c7a5;
+    color: white;
+}
+*/
+
+/* --- INPUT AREA --- */
+.input-area {
+    position: fixed;
+    bottom: 75px; /* Acima do menu inferior */
+    left: 0;
+    width: 100%;
+    background-color: #f0f2f5;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 15;
+    bottom: 0;
+}
+
+.input-wrapper {
+    flex: 1;
+    position: relative;
+    background-color: #fff;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.btn-attach, .btn-send {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.btn-attach {
+    background: transparent;
+    color: #54656f;
+}
+
+.btn-send {
+    background-color: #00c7a5;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.btn-send:active {
+    transform: scale(0.95);
+}
+
+.icon-emoji {
+    color: #888;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+}

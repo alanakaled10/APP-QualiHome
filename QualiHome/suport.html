@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QualiHome - Suporte</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/suporte.css">
+</head>
+<body>
+
+<div class="mobile-container chat-wrapper">
+
+    <div class="chat-header">
+        <button class="btn-back" onclick="window.location.href='home.html'">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        
+        <div class="agent-info">
+            <div class="agent-avatar">
+                <i class="fa-solid fa-headset"></i>
+                <div class="online-dot"></div>
+            </div>
+            <div class="agent-text">
+                <h3>Suporte QualiHome</h3>
+                <span>Online agora</span>
+            </div>
+        </div>
+        
+        <button class="btn-options">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </button>
+    </div>
+
+    <div class="chat-area" id="chatArea">
+        
+        <div class="date-divider"><span>Hoje</span></div>
+
+        <div class="message received">
+            <div class="msg-bubble">
+                Olá, Maria! Bem-vinda ao suporte da QualiHome. 🏠<br>
+                Eu sou a assistente virtual. Como posso ajudar com seu imóvel hoje?
+                <div class="msg-time">09:41</div>
+            </div>
+        </div>
+
+        <div class="message sent">
+            <div class="msg-bubble">
+                Oi! Gostaria de saber sobre o prazo da minha garantia elétrica.
+                <div class="msg-time">09:42 <i class="fa-solid fa-check-double"></i></div>
+            </div>
+        </div>
+
+        <div class="message received">
+            <div class="msg-bubble">
+                Claro! Verifiquei aqui no seu perfil. Sua garantia elétrica é válida até <strong>Dezembro de 2026</strong>.
+                <div class="msg-time">09:42</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="input-area">
+        <button class="btn-attach">
+            <i class="fa-solid fa-paperclip"></i>
+        </button>
+        <div class="input-wrapper">
+            <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
+            <i class="fa-regular fa-face-smile icon-emoji"></i>
+        </div>
+        <button class="btn-send" onclick="sendMessage()">
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+    </div>
+
+
+</div>
+
+<script src="js/suporte.js"></script>
+
+</body>
+</html>
