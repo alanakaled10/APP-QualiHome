@@ -1,0 +1,236 @@
+/* --- RESET E VARIÁVEIS GERAIS (Igual ao Dashboard) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+    --primary-color: #009688;
+    --bg-color: #f4f7f6;
+    --white: #ffffff;
+    --text-dark: #333;
+    --text-light: #666;
+
+    /* Cores de status */
+    --risk-high: #d32f2f;
+    /* Vermelho */
+    --risk-med: #fbc02d;
+    /* Amarelo */
+    --risk-low: #1976d2;
+    /* Azul */
+
+    --tag-bg-red: #ffebee;
+    --tag-text-red: #c62828;
+    --tag-bg-green: #e8f5e9;
+    --tag-text-green: #2e7d32;
+    --tag-bg-yellow: #fffde7;
+    --tag-text-yellow: #f57f17;
+    --tag-bg-blue: #e3f2fd;
+    --tag-text-blue: #1565c0;
+    --tag-bg-gray: #f5f5f5;
+    --tag-text-gray: #616161;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    padding-bottom: 80px;
+    /* Espaço para o menu não cobrir o último card */
+}
+
+/* --- HEADER --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(28, 28, 132);
+}
+
+header span {
+    color: rgb(196, 124, 29);
+}
+
+header h2 {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+/* --- CONTAINER --- */
+.container {
+    max-width: 800px;
+    /* Um pouco mais estreito para parecer lista */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- CARD DO CHAMADO --- */
+.ticket-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+
+    /* A mágica da borda colorida na esquerda */
+    border-left: 6px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.ticket-card:hover {
+    transform: translateY(-2px);
+    /* Efeito suave ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Variações de cor da borda lateral */
+.border-red {
+    border-left-color: var(--risk-high);
+}
+
+.border-yellow {
+    border-left-color: var(--risk-med);
+}
+
+.border-blue {
+    border-left-color: var(--risk-low);
+}
+
+/* Topo do Card (Unidade e Tempo) */
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.unit-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+.time-ago {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* Título do Problema */
+.problem-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.problem-title i {
+    font-size: 1.3rem;
+    color: var(--text-light);
+}
+
+/* Ícone roxo para IA (conforme imagem) */
+.ai-icon {
+    color: #9c27b0 !important;
+}
+
+/* Container de Tags */
+.tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Se tiver muita tag, quebra linha */
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Cores das Tags */
+.tag-danger {
+    background-color: var(--tag-bg-red);
+    color: var(--tag-text-red);
+}
+
+.tag-success {
+    background-color: var(--tag-bg-green);
+    color: var(--tag-text-green);
+}
+
+.tag-warning {
+    background-color: var(--tag-bg-yellow);
+    color: var(--tag-text-yellow);
+}
+
+.tag-info {
+    background-color: var(--tag-bg-blue);
+    color: var(--tag-text-blue);
+}
+
+.tag-gray {
+    background-color: var(--tag-bg-gray);
+    color: var(--tag-text-gray);
+}
+
+/* Texto do SLA */
+.sla-text {
+    font-size: 0.85rem;
+    color: var(--risk-high);
+    /* Vermelho padrão para SLA */
+    font-weight: 500;
+}
+
+.sla-normal {
+    color: var(--text-light);
+}
+
+/* Se não estiver vencendo */
+
+/* --- MENU INFERIOR (Igual ao anterior) --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.75rem;
+}
+
+.nav-item i {
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+.nav-item.active,
+.nav-item:hover {
+    color: var(--primary-color);
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QualiPro - Dashboard</title>
+    <link rel="stylesheet" href="css/home.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    
+</head>
+<body>
+
+    <header>
+        <h1>Quali<span>Pro</span></h1>
+        <p>Dashboard</p>
+    </header>
+
+    <main class="container">
+        
+        <!-- KPIs -->
+        <section class="kpi-section" >
+            <div class="card">
+                <h3>Novos Chamados (Hoje)</h3>
+                <div class="number">12</div>
+                <div class="icon-corner text-red"><i class="ph ph-trend-up"></i></div>
+            </div>
+            <div class="card urgent">
+                <h3>Críticos/Urgentes</h3>
+                <div class="number">3</div>
+            </div>
+            <div class="card">
+                <h3>SLA a Vencer</h3>
+                <div class="number">5</div>
+                <div class="icon-corner text-orange"><i class="ph ph-clock"></i></div>
+            </div>
+        </section>
+
+        <!-- GRÁFICO -->
+        <section class="chart-section">
+            <h2 class="section-title">Chamados por Categoria (Semana)</h2>
+            
+            <div class="chart-container">
+                
+                
+                <div class="bar-group">
+                    <div class="bar" style="height: 80%" title="80 chamados"></div>
+                    <span class="bar-label">Hidráulica</span>
+                </div>
+                
+                <div class="bar-group">
+                    <div class="bar" style="height: 60%" title="60 chamados"></div>
+                    <span class="bar-label">Elétrica</span>
+                </div>
+                
+                <div class="bar-group">
+                    <div class="bar" style="height: 40%" title="40 chamados"></div>
+                    <span class="bar-label">Estrutural</span>
+                </div>
+                
+                <div class="bar-group">
+                    <div class="bar" style="height: 30%" title="30 chamados"></div>
+                    <span class="bar-label">Pintura</span>
+                </div>
+                
+                <div class="bar-group">
+                    <div class="bar" style="height: 20%" title="20 chamados"></div>
+                    <span class="bar-label">Outros</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ATIVIDADES -->
+        <h2 class="section-title" style="margin-left: 10px;">Atividade Recente</h2>
+        <div class="container activity-list" style="padding: 0;">
+            <div class="activity-item">
+                <div class="activity-icon text-green"><i class="ph ph-check-circle"></i></div>
+                <div class="activity-details">
+                    <h4>João Silva concluiu chamado #847</h4>
+                    <span>Hidráulica - Torre A</span>
+                    <span class="time">8 min atrás</span>
+                </div>
+            </div>
+            <div class="activity-item">
+                <div class="activity-icon text-red"><i class="ph ph-warning-circle"></i></div>
+                <div class="activity-details">
+                    <h4>Maria Santos marcou urgente #892</h4>
+                    <span>Elétrica - Torre B</span>
+                    <span class="time">23 min atrás</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        
+        <a href="" class="nav-item active">
+            <i class="ph ph-squares-four"></i>
+            <span>Dashboard</span>
+        </a>
+        
+        <a href="" class="nav-item " onclick="goChamado()">
+            <i class="ph ph-wrench"></i>
+            <span>Chamados</span>
+        </a>
+
+        <a href="" class="nav-item" onclick="goAgenda()"><i class="ph ph-calendar-blank"></i><span>Agenda</span></a>
+
+        <a href="#" class="nav-item" onclick="goRelatorio()"><i class="ph ph-file-text"></i><span>Relatórios</span></a>
+    </nav>
+
+    <script src="js/home.js"></script>
+   
+</body>
+</html>

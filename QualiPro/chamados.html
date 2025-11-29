@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/chamados.css">
+    <title>QualiPro - Fila de Atendimento</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+   
+</head>
+<body>
+
+    <header>
+        <h1>Quali<span>Pro</span></h1>
+        <h2>Fila de Atendimento</h2>
+    </header>
+
+    <main class="container">
+        
+        <!-- CARD 1 (Risco Alto - Vermelho) -->
+        <div class="ticket-card border-red" onclick="abrirChamado('302')">
+            <div class="card-top">
+                <span class="unit-name">Unidade 302</span>
+                <span class="time-ago">Há 30 min</span>
+            </div>
+            
+            <div class="problem-title">
+                <!-- Ícone de estrelas para representar IA -->
+                <i class="ph ph-sparkle ai-icon"></i>
+                <span>Infiltração na parede da cozinha</span>
+            </div>
+
+            <div class="tags-row">
+                <span class="tag tag-danger">IA: Risco Alto</span>
+                <span class="tag tag-success">Garantia Ativa</span>
+                <span class="tag tag-gray">Hidráulica</span>
+            </div>
+
+            <div class="sla-text">SLA Vence em: 4h</div>
+        </div>
+
+        <!-- CARD 2 (Risco Médio - Amarelo) -->
+        <div class="ticket-card border-yellow" onclick="abrirChamado('501')">
+            <div class="card-top">
+                <span class="unit-name">Unidade 501</span>
+                <span class="time-ago">Há 2 horas</span>
+            </div>
+            
+            <div class="problem-title">
+                <i class="ph ph-user"></i>
+                <span>Torneira da pia pingando</span>
+            </div>
+
+            <div class="tags-row">
+                <span class="tag tag-warning">Manual: Risco Médio</span>
+                <span class="tag tag-gray">Garantia Expirada</span>
+                <span class="tag tag-gray">Hidráulica</span>
+            </div>
+
+            <div class="sla-text sla-normal">SLA Vence em: 2 dias</div>
+        </div>
+
+        <!-- CARD 3 (Risco Alto - Vermelho) -->
+        <div class="ticket-card border-red" onclick="abrirChamado('105')">
+            <div class="card-top">
+                <span class="unit-name">Unidade 105</span>
+                <span class="time-ago">Há 1 hora</span>
+            </div>
+            
+            <div class="problem-title">
+                <i class="ph ph-sparkle ai-icon"></i>
+                <span>Vazamento no banheiro</span>
+            </div>
+
+            <div class="tags-row">
+                <span class="tag tag-danger">IA: Risco Alto</span>
+                <span class="tag tag-success">Garantia Ativa</span>
+                <span class="tag tag-gray">Hidráulica</span>
+            </div>
+
+            <div class="sla-text">SLA Vence em: 6h</div>
+        </div>
+
+        <!-- CARD 4 (Risco Baixo - Azul) -->
+        <div class="ticket-card border-blue" onclick="abrirChamado('203')">
+            <div class="card-top">
+                <span class="unit-name">Unidade 203</span>
+                <span class="time-ago">Há 5 horas</span>
+            </div>
+            
+            <div class="problem-title">
+                <i class="ph ph-user"></i>
+                <span>Lâmpada queimada no corredor</span>
+            </div>
+
+            <div class="tags-row">
+                <span class="tag tag-info">Manual: Risco Baixo</span>
+                <span class="tag tag-success">Garantia Ativa</span>
+                <span class="tag tag-gray">Elétrica</span>
+            </div>
+
+            <div class="sla-text sla-normal">SLA Vence em: 5 dias</div>
+        </div>
+
+    </main>
+
+    <!-- MENU INFERIOR -->
+    <nav class="bottom-nav">
+        <!-- O link para o dashboard deve voltar para a tela anterior -->
+        <a href="home.html" class="nav-item">
+            <i class="ph ph-squares-four"></i>
+            <span>Dashboard</span>
+        </a>
+        <!-- A classe 'active' está aqui agora -->
+        <a href="chamados.html" class="nav-item active">
+            <i class="ph ph-wrench"></i>
+            <span>Chamados</span>
+        </a>
+        <a href="agenda.html" class="nav-item">
+            <i class="ph ph-calendar-blank"></i>
+            <span>Agenda</span>
+        </a>
+        <a href="relatorio.html" class="nav-item">
+            <i class="ph ph-file-text"></i>
+            <span>Relatórios</span>
+        </a>
+    </nav>
+
+   <script src="js/chamados.js"></script>
+    
+
+</body>
+</html>

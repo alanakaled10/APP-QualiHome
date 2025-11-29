@@ -28,15 +28,11 @@ body {
 }
 
 /* Estilos do Logotipo (simulado com texto) */
-.logo h1 {
-    color: #1a2b4c; /* Azul escuro */
-    font-size: 32px;
-    margin-bottom: 20px;
+.logo img {
+  width: 350px;
 }
 
-.logo span {
-    color: #e67e22; /* Laranja */
-}
+
 
 /* Títulos */
 h2 {

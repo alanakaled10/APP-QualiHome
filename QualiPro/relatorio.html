@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QualiPro - Relatórios</title>
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/relatorio.css">
+</head>
+<body>
+
+    <header>
+        <h1>Quali<span>Pro</span></h1>
+        <h2>Relatórios</h2>
+    </header>
+
+    <main class="container">
+        
+        <div class="tabs-container">
+            <button class="tab-btn active">Este Mês</button>
+            <button class="tab-btn">Este Ano</button>
+        </div>
+
+        <section class="chart-section">
+            <h3 class="section-title">Top Ofensores por Categoria</h3>
+            
+            <div class="chart-wrapper">
+                <div class="donut-chart"></div>
+            </div>
+
+            <div class="chart-legend">
+                <div class="legend-item">
+                   <div class="legend-left">
+                       <span class="dot blue"></span>
+                       <span>Acabamento</span>
+                   </div>
+                   <span class="percentage">15%</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-left">
+                        <span class="dot yellow"></span>
+                        <span>Elétrica</span>
+                    </div>
+                    <span class="percentage">25%</span>
+                 </div>
+                 <div class="legend-item">
+                    <div class="legend-left">
+                        <span class="dot red"></span>
+                        <span>Hidráulica</span>
+                    </div>
+                    <span class="percentage">40%</span>
+                 </div>
+                 <div class="legend-item">
+                    <div class="legend-left">
+                        <span class="dot gray"></span>
+                        <span>Outros</span>
+                    </div>
+                    <span class="percentage">20%</span>
+                 </div>
+            </div>
+        </section>
+
+
+        <section class="ranking-section">
+            <h3 class="section-title">Ranking de Falhas de Materiais (Top 5)</h3>
+            
+            <div class="ranking-list">
+                
+                <div class="ranking-item">
+                    <div class="item-header">
+                        <span class="item-name">1. Torneira Marca X</span>
+                        <span class="item-count">52 falhas</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 100%;"></div>
+                    </div>
+                </div>
+
+                <div class="ranking-item">
+                    <div class="item-header">
+                        <span class="item-name">2. Vaso Sanitário Marca Y</span>
+                        <span class="item-count">30 falhas</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 58%;"></div>
+                    </div>
+                </div>
+
+                <div class="ranking-item">
+                    <div class="item-header">
+                        <span class="item-name">3. Interruptor Marca Z</span>
+                        <span class="item-count">24 falhas</span>
+                    </div>
+                    <div class="progress-bg">
+                        <div class="progress-fill" style="width: 46%;"></div>
+                    </div>
+                </div>
+
+                <div class="ranking-item">
+                    <div class="item-header">
+                        <span class="item-name">4. Rejunte Marca W</span>
+                        <span class="item-count">18 falhas</span>
+                    </div>
+                    <div class="progress-bg">
+                         <div class="progress-fill" style="width: 35%;"></div>
+                    </div>
+                </div>
+
+                <div class="ranking-item">
+                    <div class="item-header">
+                        <span class="item-name">5. Fechadura Marca K</span>
+                        <span class="item-count">15 falhas</span>
+                    </div>
+                    <div class="progress-bg">
+                         <div class="progress-fill" style="width: 29%;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <i class="ph ph-squares-four"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="chamados.html" class="nav-item">
+            <i class="ph ph-wrench"></i>
+            <span>Chamados</span>
+        </a>
+        <a href="agenda.html" class="nav-item">
+            <i class="ph ph-calendar-blank"></i>
+            <span>Agenda</span>
+        </a>
+        <a href="#" class="nav-item active">
+            <i class="ph ph-chart-bar"></i>
+            <span>Relatórios</span>
+        </a>
+    </nav>
+
+    <script src="js/relatorio.js"></script>
+
+</body>
+</html>

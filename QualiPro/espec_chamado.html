@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Chamado - QualiPro</title>
+    
+    <link rel="stylesheet" href="css/espec_chamado.css">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <button class="back-btn" >
+            <i class="ph ph-arrow-left"></i>
+        </button>
+        <h2>Chamado #4521 - Unidade 302</h2>
+    </header>
+
+    <div class="source-banner">
+        <i class="ph ph-robot"></i>
+        <span>Origem: Análise Automática via IA (Vídeo)</span>
+    </div>
+
+    <main class="container">
+        
+        <section class="video-section">
+            <h3>Mídia Enviado pelo Cliente</h3>
+            <div class="video-placeholder">
+                <div class="play-button">
+                    <i class="ph-fill ph-play"></i>
+                </div>
+                <span class="video-time">02:34</span>
+            </div>
+        </section>
+
+        <section class="card diagnosis-card">
+            <div class="card-header">
+                <i class="ph ph-sparkle"></i>
+                <h3>Resultado do Diagnóstico IA</h3>
+            </div>
+            
+            <div class="card-body">
+                <p class="suggestion-text">
+                    Sugestão: <span class="highlight">Falha na vedação externa.</span>
+                </p>
+
+                <div class="confidence-section">
+                    <div class="confidence-labels">
+                        <span>Confiança da IA</span>
+                        <span class="confidence-value">85%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                    <span class="confidence-status">Alta</span>
+                </div>
+
+                <div class="warranty-box">
+                    <i class="ph-fill ph-circle"></i>
+                    <div>
+                        <strong>Status Garantia: ATIVA</strong>
+                        <p>Vence em 20/12</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="actions-row">
+            <button class="btn btn-outline">Validar Diagnóstico</button>
+            <button class="btn btn-solid">Agendar Técnico</button>
+        </section>
+
+        <section class="accordion-group">
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Planta da Unidade</span>
+                    <i class="ph ph-caret-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <p>Conteúdo da planta da unidade aqui...</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Detalhes Técnicos</span>
+                    <i class="ph ph-caret-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <p>Lista de materiais e especificações técnicas...</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Histórico do Chamado</span>
+                    <i class="ph ph-caret-down"></i>
+                </button>
+                <div class="accordion-content">
+                    <p>Log de atividades e interações anteriores...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/espec_chamado.js"></script>
+</body>
+</html>

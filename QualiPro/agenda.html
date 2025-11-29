@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QualiPro - Agenda da Equipe</title>
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/agenda.css">
+</head>
+<body>
+
+    <header>
+        <h1>Quali<span>Pro</span></h1>
+        <h2>Agenda da Equipe</h2>
+    </header>
+
+    <div class="date-navigator">
+        <button id="prev-day-btn">
+            <i class="ph ph-caret-left"></i>
+        </button>
+        
+        <div class="current-date">
+            <i class="ph ph-calendar-blank"></i>
+            <span id="date-display">Hoje, 25 Nov</span>
+        </div>
+        
+        <button id="next-day-btn">
+            <i class="ph ph-caret-right"></i>
+        </button>
+    </div>
+
+    <main class="main-container">
+        
+        <div class="calendar-scroll-container">
+            
+            <div class="calendar-grid">
+
+                <div class="grid-header-cell empty-corner"></div>
+                <div class="grid-header-cell">8h</div>
+                <div class="grid-header-cell">9h</div>
+                <div class="grid-header-cell">10h</div>
+                <div class="grid-header-cell">11h</div>
+                <div class="grid-header-cell">12h</div>
+                <div class="grid-header-cell">13h</div>
+                <div class="grid-header-cell">14h</div>
+                <div class="grid-header-cell">15h</div>
+                <div class="grid-header-cell">16h</div>
+                <div class="grid-header-cell">17h</div>
+                <div class="grid-header-cell">18h</div>
+
+                <div class="technician-cell row-paulo">
+                    <div class="avatar purple">P</div>
+                    <span>Paulo</span>
+                </div>
+                <div class="grid-cell row-paulo"></div>
+                <div class="grid-cell row-paulo"></div>
+                <div class="grid-cell row-paulo"></div>
+                <div class="grid-cell row-paulo"></div>
+                <div class="grid-cell row-paulo"></div>
+                <div class="grid-cell row-paulo"></div>
+                <div class="grid-cell row-paulo"></div>
+                <div class="grid-cell row-paulo"></div>
+                <div class="grid-cell row-paulo"></div>
+                <div class="grid-cell row-paulo"></div>
+                <div class="grid-cell row-paulo"></div>
+
+                <div class="event event-red urgent" style="grid-column: 3 / 5; grid-row: 2;">
+                    <strong>#4521</strong>
+                    <span>Unidade 302</span>
+                    <span class="tag-urgent">Urgente</span>
+                </div>
+
+
+                <div class="technician-cell row-maria">
+                    <div class="avatar teal">M</div>
+                    <span>Maria</span>
+                </div>
+                <div class="grid-cell row-maria"></div>
+                <div class="grid-cell row-maria"></div>
+                <div class="grid-cell row-maria"></div>
+                <div class="grid-cell row-maria"></div>
+                <div class="grid-cell row-maria"></div>
+                <div class="grid-cell row-maria"></div>
+                <div class="grid-cell row-maria"></div>
+                <div class="grid-cell row-maria"></div>
+                <div class="grid-cell row-maria"></div>
+                <div class="grid-cell row-maria"></div>
+                <div class="grid-cell row-maria"></div>
+
+                <div class="event event-blue" style="grid-column: 7 / 9; grid-row: 3;">
+                    <strong>#4525</strong>
+                    <span>Unidade 101</span>
+                </div>
+
+            </div> </div> <div class="hint-text">
+            Arraste horizontalmente para ver mais horários • Espaços vazios indicam disponibilidade
+        </div>
+
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <i class="ph ph-squares-four"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="chamados.html" class="nav-item">
+            <i class="ph ph-wrench"></i>
+            <span>Chamados</span>
+        </a>
+        <a href="agenda.html" class="nav-item active">
+            <i class="ph ph-calendar-blank"></i>
+            <span>Agenda</span>
+        </a>
+        <a href="relatorio.html" class="nav-item">
+            <i class="ph ph-file-text"></i>
+            <span>Relatórios</span>
+        </a>
+    </nav>
+
+    <script src="js/agenda.js"></script>
+
+</body>
+</html>
