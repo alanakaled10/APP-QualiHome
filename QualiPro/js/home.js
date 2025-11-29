@@ -16,6 +16,10 @@ function goChamado() {
     window.location.href = "chamados.html";
 }
 
+function goAtendimento() {
+    window.location.href = "atendimentos.html";
+}
+
 function goAgenda() {
     window.location.href = "agenda.html";
 }

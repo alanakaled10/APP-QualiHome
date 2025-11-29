@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QualiPro - Atendimento #101</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="../QualiHome/css/suporte.css">
+    <link rel="stylesheet" href="css/atendimentos.css">
+</head>
+<body>
+
+<div class="mobile-container chat-wrapper">
+
+    <div class="chat-header pro-chat-header">
+        <button class="btn-back" onclick="window.location.href='atendimentos.html'">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        
+        <div class="agent-info ticket-info-header">
+            <div class="user-avatar-small">JD</div>
+            <div class="agent-text">
+                <h3>João da Silva (Unidade 302) </h3>
+                <span class="status-badge online">Online</span>
+                <span>Protocolo: #2023101</span>
+            </div>
+        </div>
+        
+        <div class="header-actions">
+            <button class="icon-btn" title="Info do Cliente"><i class="fa-solid fa-circle-info"></i></button>
+            <button class="icon-btn dropdown-trigger"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+        </div>
+    </div>
+
+    <div class="chat-area" id="chatArea">
+        <div class="date-divider"><span>Hoje</span></div>
+
+        <div class="message received">
+            <div class="msg-bubble">
+                Olá! Gostaria de saber sobre o prazo da minha garantia elétrica.
+                <div class="msg-time">09:45</div>
+            </div>
+        </div>
+
+        
+
+        <div class="message sent pro-sent">
+            <div class="msg-bubble">
+                Bom dia, João! Tudo bem? Vou verificar essa informação para você agora mesmo.
+                <div class="msg-time">09:47 <i class="fa-solid fa-check-double"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pro-input-container">
+        <div class="quick-replies">
+            <button class="chip">✅ Confirmar agendamento</button>
+            <button class="chip">📄 Solicitar foto</button>
+            <button class="chip">🕒 Informar prazo padrão</button>
+        </div>
+
+        <div class="input-area pro-input-area">
+            <button class="btn-attach">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+            <div class="input-wrapper">
+                <textarea id="messageInput" placeholder="Escreva uma resposta ou nota interna..." rows="1"></textarea>
+                <i class="fa-regular fa-face-smile icon-emoji"></i>
+            </div>
+            <button class="btn-toggle-mode" title="Alternar para Nota Interna">
+                <i class="fa-solid fa-lock-open"></i>
+            </button>
+            <button class="btn-send pro-btn-send" onclick="sendProMessage()">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="js/atendimento.js"></script>
+
+</body>
+</html>

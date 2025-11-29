@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QualiPro - Fila de Atendimento</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/atendimentos.css">
+</head>
+<body>
+
+<div class="mobile-container">
+    
+    <header class="pro-header">
+        <div class="header-title">
+            <h1>Fila de Atendimento</h1>
+            
+        </div>
+        <div class="header-actions">
+            <button class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <button class="icon-btn"><i class="fa-solid fa-filter"></i></button>
+        </div>
+    </header>
+
+    <div class="chat-tabs">
+        <button class="tab-btn active">Em Aberto (3)</button>
+        <button class="tab-btn">Meus (1)</button>
+        <button class="tab-btn">Finalizados</button>
+    </div>
+
+    <main class="ticket-list" id="ticketList">
+        
+        <div class="ticket-card priority-high" onclick="window.location.href='suporte.html'">
+            <div class="ticket-left">
+                <div class="user-avatar">JD</div>
+            </div>
+            <div class="ticket-info">
+                <div class="info-header">
+                    <h3>João da Silva</h3>
+                    <span class="ticket-time">09:45</span>
+                </div>
+                <p class="last-message">Gostaria de saber sobre o prazo da garantia elétrica...</p>
+                <div class="ticket-tags">
+                    <span class="tag tag-unit">Unidade 302</span>
+                    <span class="tag tag-new">Novo</span>
+                </div>
+            </div>
+             <div class="unread-indicator"></div>
+        </div>
+
+        <div class="ticket-card priority-medium" onclick="window.location.href='pro-chat.html?id=102'">
+            <div class="ticket-left">
+                <div class="user-avatar">MS</div>
+            </div>
+            <div class="ticket-info">
+                <div class="info-header">
+                    <h3>Maria Souza</h3>
+                    <span class="ticket-time">Ontem</span>
+                </div>
+                <p class="last-message"><i class="fa-solid fa-reply"></i> Aguardando sua resposta sobre a infiltração.</p>
+                <div class="ticket-tags">
+                    <span class="tag tag-unit">Unidade 501</span>
+                    <span class="tag tag-pending">Pendente</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="ticket-card" onclick="window.location.href='pro-chat.html?id=103'">
+            <div class="ticket-left">
+                <div class="user-avatar">PC</div>
+            </div>
+            <div class="ticket-info">
+                <div class="info-header">
+                    <h3>Pedro Costa</h3>
+                    <span class="ticket-time">Segunda</span>
+                </div>
+                <p class="last-message"><i class="fa-solid fa-check"></i> Agendamento confirmado para dia 15.</p>
+                <div class="ticket-tags">
+                    <span class="tag tag-unit">Unidade 105</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+     <nav class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <i class="ph ph-squares-four"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="chamados.html" class="nav-item">
+            <i class="ph ph-wrench"></i>
+            <span>Chamados</span>
+        </a>
+
+        <a href="atendimentos.html" class="nav-item active">
+            <i class="fa-solid fa-headset"></i>
+            <span>Atendimentos</span>
+        </a>
+
+        <a href="agenda.html" class="nav-item">
+            <i class="ph ph-calendar-blank"></i>
+            <span>Agenda</span>
+        </a>
+        <a href="relatorio.html" class="nav-item ">
+            <i class="ph ph-chart-bar"></i>
+            <span>Relatórios</span>
+        </a>
+    </nav>
+
+</div>
+
+<script src="js/atendimento.js"></script>
+</body>
+</html>
