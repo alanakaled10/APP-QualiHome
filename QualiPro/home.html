@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,25 @@
     <link rel="stylesheet" href="css/home.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
 </head>
+
 <body>
 
     <header>
-        <h1>Quali<span>Pro</span></h1>
-        <p>Dashboard</p>
+        <div>
+            <h1>Quali<span>Pro</span></h1>
+            <p>Dashboard</p>
+        </div>
+        <div class="btn-off" onclick="off()">
+            <i class="fa-solid fa-power-off"></i>
+        </div>
     </header>
 
     <main class="container">
-        
+
         <!-- KPIs -->
-        <section class="kpi-section" >
+        <section class="kpi-section">
             <div class="card">
                 <h3>Novos Chamados (Hoje)</h3>
                 <div class="number">12</div>
@@ -40,33 +47,43 @@
         <!-- GRÁFICO -->
         <section class="chart-section">
             <h2 class="section-title">Chamados por Categoria (Semana)</h2>
-            
-            <div class="chart-container">
-                
-                
-                <div class="bar-group">
-                    <div class="bar" style="height: 80%" title="80 chamados"></div>
-                    <span class="bar-label">Hidráulica</span>
+
+            <div class="chart-wrapper-flex">
+
+                <div class="chart-y-axis">
+                    <span>20</span>
+                    <span>15</span>
+                    <span>10</span>
+                    <span>5</span>
+                    <span>0</span>
                 </div>
-                
-                <div class="bar-group">
-                    <div class="bar" style="height: 60%" title="60 chamados"></div>
-                    <span class="bar-label">Elétrica</span>
-                </div>
-                
-                <div class="bar-group">
-                    <div class="bar" style="height: 40%" title="40 chamados"></div>
-                    <span class="bar-label">Estrutural</span>
-                </div>
-                
-                <div class="bar-group">
-                    <div class="bar" style="height: 30%" title="30 chamados"></div>
-                    <span class="bar-label">Pintura</span>
-                </div>
-                
-                <div class="bar-group">
-                    <div class="bar" style="height: 20%" title="20 chamados"></div>
-                    <span class="bar-label">Outros</span>
+
+                <div class="chart-container-styled">
+
+                    <div class="bar-group">
+                        <div class="bar" style="height: 90%" title="18 Chamados"></div>
+                        <span class="bar-label">Hidráulica</span>
+                    </div>
+
+                    <div class="bar-group">
+                        <div class="bar" style="height: 60%" title="12 Chamados"></div>
+                        <span class="bar-label">Elétrica</span>
+                    </div>
+
+                    <div class="bar-group">
+                        <div class="bar" style="height: 40%" title="8 Chamados"></div>
+                        <span class="bar-label">Estrutural</span>
+                    </div>
+
+                    <div class="bar-group">
+                        <div class="bar" style="height: 30%" title="6 Chamados"></div>
+                        <span class="bar-label">Pintura</span>
+                    </div>
+
+                    <div class="bar-group">
+                        <div class="bar" style="height: 20%" title="4 Chamados"></div>
+                        <span class="bar-label">Outros</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -94,12 +111,12 @@
     </main>
 
     <nav class="bottom-nav">
-        
+
         <a href="" class="nav-item active">
             <i class="ph ph-squares-four"></i>
             <span>Dashboard</span>
         </a>
-        
+
         <a href="" class="nav-item " onclick="goChamado()">
             <i class="ph ph-wrench"></i>
             <span>Chamados</span>
@@ -109,12 +126,19 @@
             <span>Atendimentos</span>
         </a>
 
-        <a href="" class="nav-item" onclick="goAgenda()"><i class="ph ph-calendar-blank"></i><span>Agenda</span></a>
+        <a href="" class="nav-item" onclick="goAgenda()">
+            <i class="ph ph-calendar-blank"></i>
+            <span>Agenda</span>
+        </a>
 
-        <a href="#" class="nav-item" onclick="goRelatorio()"><i class="ph ph-file-text"></i><span>Relatórios</span></a>
+        <a href="#" class="nav-item" onclick="goRelatorio()">
+            <i class="ph ph-chart-bar"></i>
+            <span>Relatórios</span>
+        </a>
     </nav>
 
     <script src="js/home.js"></script>
-   
+
 </body>
+
 </html>

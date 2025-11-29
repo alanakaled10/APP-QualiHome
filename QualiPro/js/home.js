@@ -12,6 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+function off() {
+    window.location.href = "index.html";
+}
+
 function goChamado() {
     window.location.href = "chamados.html";
 }

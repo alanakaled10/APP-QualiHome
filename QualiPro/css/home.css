@@ -27,6 +27,8 @@ header {
     background-color: var(--primary-color);
     color: var(--white);
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 header h1 {
@@ -34,13 +36,18 @@ header h1 {
     color: rgb(28, 28, 132);
 }
 
-header h1 span{
+header h1 span {
     color: rgb(196, 124, 29);
 }
 
 header p {
     font-size: 1.1rem;
     opacity: 0.9;
+}
+
+.btn-off{
+    font-size: 20px;
+    cursor: pointer;
 }
 
 /* --- LAYOUT --- */
@@ -104,13 +111,16 @@ header p {
     color: #fbc02d;
 }
 
-/* --- GRÁFICO (CORRIGIDO) --- */
+/* --- SEÇÃO DO GRÁFICO (ESTILO NOVO) --- */
 .chart-section {
     background: var(--white);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     margin-bottom: 30px;
+    /* Ajuste de responsividade para os rótulos inclinados não vazarem */
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .section-title {
@@ -119,59 +129,92 @@ header p {
     margin-bottom: 20px;
 }
 
-.chart-container {
+/* Wrapper para alinhar Eixo Y e Gráfico */
+.chart-wrapper-flex {
     display: flex;
-    align-items: flex-end;
-    /* Alinha barras embaixo */
-    justify-content: space-around;
-    height: 250px;
-    /* Altura fixa do gráfico */
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 0;
-    position: relative;
-
-    /* Truque CSS para fazer as linhas de fundo (Grid) */
-    background-image: repeating-linear-gradient(0deg,
-            transparent,
-            transparent 49px,
-            #f0f0f0 50px);
-    background-size: 100% 50px;
-    /* Tamanho de cada linha do grid */
+    align-items: flex-start;
+    padding: 20px 0; /* Espaço extra para os rótulos inclinados não cortarem */
 }
 
+/* Eixo Y (Lateral com números) */
+.chart-y-axis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Altura deve ser igual à altura do container do gráfico */
+    height: 200px;
+    padding-right: 10px;
+    color: var(--text-light);
+    font-size: 0.75rem;
+    text-align: right;
+    /* Pequeno ajuste para alinhar o número com a linha do grid */
+    margin-top: -8px;
+    margin-bottom: 15px; /* Espaço para alinhar o '0' com a base */
+}
+
+/* Container do Gráfico (Novo Estilo com Grid Pontilhado) */
+.chart-container-styled {
+    flex: 1; /* Ocupa o resto do espaço */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 200px; /* Altura fixa */
+    position: relative;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+
+
+   
+
+    background-position: top, left;
+    background-repeat: repeat-x, repeat-y;
+
+    /* Tamanho dos pontos e espaçamento */
+    /* Como temos 4 divisões (0-5, 5-10, 10-15, 15-20) em 200px, cada uma tem 25% de altura */
+    background-size: 10px 25%, 12% 10px;
+}
+
+/* Grupos de barra */
 .bar-group {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 12%;
-    /* Largura da coluna */
+    width: 10%; /* Barras mais finas */
     height: 100%;
     justify-content: flex-end;
     z-index: 2;
-    /* Ficar na frente das linhas */
+    position: relative; /* Necessário para os rótulos inclinados */
 }
 
+/* Estilo da Barra */
 .bar {
     width: 100%;
     background-color: var(--primary-color);
-    border-radius: 4px 4px 0 0;
-    /* Removemos o height: 0% daqui para garantir que apareça sempre */
-    min-height: 4px;
-    /* Garante que mesmo zerado apareça um pouquinho */
-    transition: opacity 0.3s;
+    /* Arredonda apenas as pontas de cima (6px) */
+    border-radius: 6px 6px 0 0;
+    min-height: 2px;
+    transition: all 0.3s;
 }
 
 .bar:hover {
-    opacity: 0.8;
-    cursor: pointer;
+    opacity: 0.85;
+    cursor: help;
 }
 
+/* Rótulos do Eixo X (Inclinados) */
 .bar-label {
-    margin-top: 10px;
-    font-size: 0.75rem;
-    color: var(--text-light);
+    position: absolute;
+    bottom: -35px; /* Empurra para baixo do gráfico */
+    left: 50%;
+    width: 100px; /* Largura fixa para permitir rotação sem quebrar linha */
     text-align: center;
-    height: 20px;
+    font-size: 0.7rem;
+    color: var(--text-light);
+
+    /* A mágica da inclinação */
+    transform: translateX(-50%) rotate(-25deg);
+    transform-origin: center top;
+    white-space: nowrap;
 }
 
 /* --- LISTA DE ATIVIDADES --- */
@@ -212,10 +255,7 @@ header p {
     margin-top: 4px;
 }
 
-
-
-
-/* --- MENU --- */
+/* --- MENU INFERIOR --- */
 .bottom-nav {
     position: fixed;
     bottom: 0;
@@ -249,11 +289,13 @@ header p {
     color: var(--primary-color);
 }
 
+/* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     .kpi-section {
         flex-direction: column;
     }
 
+    /* Diminui um pouco a fonte dos rótulos inclinados no celular */
     .bar-label {
         font-size: 0.6rem;
     }
