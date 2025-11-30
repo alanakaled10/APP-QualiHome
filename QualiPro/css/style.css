@@ -1,116 +1,172 @@
-/* Reset básico e fonte */
+:root {
+  --primary-color: #2979ff; /* Azul vibrante da imagem */
+  --primary-hover: #1565c0;
+  --text-dark: #333;
+  --text-muted: #666;
+  --white: #ffffff;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif; /* Usa Roboto se disponível, ou sans-serif padrão */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #f4f7f9; /* Cor de fundo clara */
-    /* Se tiver a imagem de fundo, descomente e ajuste o caminho abaixo: */
-    /* background-image: url('caminho-para-sua-imagem-de-fundo.jpg'); background-size: cover; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  /* Imagem de fundo de construção civil (high-rise) */
+  background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Container principal centralizado */
+/* --- Efeito de Vidro (Glassmorphism) --- */
 .login-box {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    width: 100%;
-    max-width: 450px; /* Largura máxima do cartão */
-    text-align: center;
+  background: rgba(255, 255, 255, 0.75); /* Branco com 75% de opacidade */
+  backdrop-filter: blur(12px); /* O desfoque do fundo */
+  -webkit-backdrop-filter: blur(12px); /* Compatibilidade Safari */
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25); /* Sombra forte para profundidade */
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
 }
 
-/* Estilos do Logotipo (simulado com texto) */
+/* --- Elementos Internos --- */
 .logo img {
-  width: 350px;
+  max-width: 180px; /* Logo um pouco menor para ficar elegante */
+  margin-bottom: 15px;
 }
 
-
-
-/* Títulos */
 h2 {
-    color: #1a2b4c;
-    font-size: 24px;
-    margin-bottom: 8px;
+  color: #1a2b4c; /* Azul marinho escuro para o título */
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 
 .subtitle {
-    color: #7f8c8d;
-    font-size: 14px;
-    margin-bottom: 30px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 30px;
 }
 
-/* Estilos do Formulário */
-.input-group {
-    text-align: left;
-    margin-bottom: 15px;
+/* --- Inputs com Ícones --- */
+.input-wrapper {
+  text-align: left;
+  margin-bottom: 20px;
 }
 
-.input-group label {
-    display: block;
-    color: #555;
-    font-size: 14px;
-    margin-bottom: 5px;
-    font-weight: 500;
+.input-wrapper label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+  margin-left: 4px;
 }
 
-.input-group input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #dcdde1;
-    border-radius: 6px;
-    outline: none;
-    transition: border-color 0.3s;
+.icon-input {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
-.input-group input:focus {
-    border-color: #1a2b4c; /* Azul ao clicar no campo */
+/* Ícone da esquerda (envelope/cadeado) */
+.icon-input i:first-child {
+  position: absolute;
+  left: 15px;
+  color: #888;
+  font-size: 1.1rem;
 }
 
-/* Link de "Esqueci minha senha" */
+/* Input em si */
+.icon-input input {
+  width: 100%;
+  padding: 12px 12px 12px 45px; /* Espaço na esquerda para o ícone */
+  border: 1px solid transparent;
+  background-color: rgba(255, 255, 255, 0.9); /* Quase branco total */
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.icon-input input:focus {
+  border-color: var(--primary-color);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(41, 121, 255, 0.15); /* Glow azul ao focar */
+}
+
+/* Ícone de ver senha (olho) */
+.toggle-pass {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: #888;
+}
+
+.toggle-pass:hover {
+  color: var(--primary-color);
+}
+
+/* --- Botões e Links --- */
+.actions {
+  display: flex;
+  justify-content: flex-end; /* Alinha 'Esqueci a senha' à direita */
+  margin-bottom: 20px;
+}
+
 .forgot-password {
-    display: block;
-    text-align: left;
-    color: #1a2b4c;
-    font-size: 13px;
-    text-decoration: underline;
-    margin-bottom: 25px;
+  color: #1a2b4c;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
 }
 
-/* Botão Entrar */
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
 .btn-login {
-    width: 100%;
-    padding: 15px;
-    background-color: #1a2b4c; /* Azul escuro do botão */
-    color: #f39c12; /* Texto laranja */
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  width: 100%;
+  padding: 14px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 4px 10px rgba(41, 121, 255, 0.3);
 }
 
 .btn-login:hover {
-    background-color: #13203a; /* Escurece um pouco ao passar o mouse */
+  background-color: var(--primary-hover);
+  transform: translateY(-2px); /* Sobe um pouquinho */
 }
 
-/* Rodapé */
+.btn-login:active {
+  transform: translateY(0);
+}
+
 footer {
-    margin-top: 25px;
-    font-size: 12px;
-    color: #7f8c8d;
-    line-height: 1.5;
+  margin-top: 30px;
+  font-size: 0.75rem;
+  color: #666;
+  line-height: 1.4;
 }
 
 footer a {
-    color: #1a2b4c;
-    text-decoration: underline;
+  color: #333;
+  text-decoration: underline;
 }

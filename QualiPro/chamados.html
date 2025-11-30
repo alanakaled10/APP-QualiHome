@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/chamados.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>QualiPro - Fila de Atendimento</title>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-   
+
 </head>
+
 <body>
 
     <header>
-        <h1>Quali<span>Pro</span></h1>
-        <h2>Fila de Atendimento</h2>
+        <div>
+            <h1>Quali<span>Pro</span></h1>
+            <h2>Fila de Atendimento</h2>
+        </div>
     </header>
 
     <main class="container">
-        
+
         <!-- CARD 1 (Risco Alto - Vermelho) -->
         <div class="ticket-card border-red" onclick="abrirChamado('302')">
             <div class="card-top">
                 <span class="unit-name">Unidade 302</span>
                 <span class="time-ago">Há 30 min</span>
             </div>
-            
+
             <div class="problem-title">
                 <!-- Ícone de estrelas para representar IA -->
                 <i class="ph ph-sparkle ai-icon"></i>
@@ -47,7 +52,7 @@
                 <span class="unit-name">Unidade 501</span>
                 <span class="time-ago">Há 2 horas</span>
             </div>
-            
+
             <div class="problem-title">
                 <i class="ph ph-user"></i>
                 <span>Torneira da pia pingando</span>
@@ -68,7 +73,7 @@
                 <span class="unit-name">Unidade 105</span>
                 <span class="time-ago">Há 1 hora</span>
             </div>
-            
+
             <div class="problem-title">
                 <i class="ph ph-sparkle ai-icon"></i>
                 <span>Vazamento no banheiro</span>
@@ -89,7 +94,7 @@
                 <span class="unit-name">Unidade 203</span>
                 <span class="time-ago">Há 5 horas</span>
             </div>
-            
+
             <div class="problem-title">
                 <i class="ph ph-user"></i>
                 <span>Lâmpada queimada no corredor</span>
@@ -133,8 +138,9 @@
         </a>
     </nav>
 
-   <script src="js/chamados.js"></script>
-    
+    <script src="js/chamados.js"></script>
+
 
 </body>
+
 </html>

@@ -3,43 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QualiHome - Criar Conta</title>
+    <title>QualiHome - Entrar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/login.css">
 </head>
 
 <body>
 
-<div class="container">
+<div class="main-background">
+    <div class="login-card glass-effect">
+        
+        <div class="logo">
+            <img src="img/qualiHome.png" alt="Logo QualiHome">
+        </div>
 
+        <h2 class="h2_home">Bem-vindo de volta!</h2>
+        <p class="subtitle">Acesse sua casa digital</p>
 
-    <div class="logo">
-        <img src="img/qualiHome.png" alt="Logo QualiHome">
+        <form id="loginForm">
+            <div class="input-wrapper">
+                <label for="username">Nome de Usuário</label>
+                <div class="icon-input">
+                    <i class="fa-regular fa-user"></i>
+                    <input type="text" id="username" placeholder="ex: marcos.oliveira" required>
+                </div>
+            </div>
+
+            <div class="input-wrapper">
+                <label for="password">Senha</label>
+                <div class="icon-input">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" placeholder="Sua senha" required>
+                    <i class="fa-regular fa-eye toggle-pass" id="togglePassword"></i>
+                </div>
+            </div>
+
+            <div class="actions">
+                <a href="#" class="forgot-password">Esqueci minha senha</a>
+            </div>
+
+            <button type="submit" class="btn">Entrar</button>
+        </form>
+
+        <p class="footer-text">
+            Ao clicar em entrar, você concorda com os <br>
+            <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a>.
+        </p>
+
     </div>
-
-    <h2 class="h2_home">Criar uma conta</h2>
-    <p class="subtitle">Insira seu e-mail para se cadastrar neste aplicativo</p>
-
-    <input type="email" id="email" placeholder="email@dominio.com">
-
-    <button class="btn" onclick="continuar()">Continuar</button>
-
-    <div class="divider">ou</div>
-
-    <button class="btn-social">
-        <img src="https://img.icons8.com/color/26/google-logo.png">
-        Continuar com o Google
-    </button>
-
-    <button class="btn-social">
-        <img src="https://img.icons8.com/ios-glyphs/26/mac-os.png">
-        Continuar com a Apple
-    </button>
-
-    <p class="footer-text">
-        Ao clicar em continuar, você concorda com os nossos <br>
-        <b>Termos de Serviço</b> e <b>Política de Privacidade</b>.
-    </p>
-
 </div>
 
 <script src="js/script.js"></script>

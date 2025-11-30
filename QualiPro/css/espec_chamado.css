@@ -1,300 +1,351 @@
-/* --- Reset e Variáveis --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-}
 
 :root {
-    --primary-teal: #009688;
-    --primary-purple: #9c27b0;
-    --bg-light: #f4f7f6;
-    --text-dark: #333;
-    --text-gray: #666;
-    --success-green: #2e7d32;
-    --border-color: #e0e0e0;
-    --white: #ffffff;
+  --primary-teal: #009688;
+  --primary-purple: #9c27b0;
+  --bg-light: #f4f7f6;
+  --white: #ffffff;
+  --text-dark: #333;
+  --text-gray: #666;
+  --success-green: #2e7d32;
+  --border-color: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    padding-bottom: 40px;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  padding-bottom: 40px;
 }
 
-/* --- Cabeçalho Fixo Superior --- */
+/* --- Layout Principal --- */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* --- Header --- */
 .main-header {
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-    background-color: var(--white);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.back-btn {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--text-dark);
-    cursor: pointer;
-    margin-right: 15px;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .main-header h2 {
-    font-size: 1.1rem;
-    font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
-/* --- Faixa Roxa --- */
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+/* --- Banner de Origem --- */
 .source-banner {
-    background-color: var(--primary-purple);
-    color: var(--white);
-    padding: 12px 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 500;
-    font-size: 0.95rem;
+  background-color: var(--primary-purple);
+  color: var(--white);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .source-banner i {
-    font-size: 1.3rem;
-}
-
-/* --- Container Principal --- */
-/* Centraliza o conteúdo em telas grandes */
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+  font-size: 1.3rem;
 }
 
 /* --- Seção de Vídeo --- */
 .video-section h3 {
-    font-size: 1rem;
-    color: var(--text-gray);
-    margin-bottom: 10px;
-    font-weight: normal;
+  font-size: 1rem;
+  color: var(--text-gray);
+  margin-bottom: 10px;
+  font-weight: normal;
 }
 
 .video-placeholder {
-    background-color: #c7c7c7; /* Cor cinza do placeholder */
-    height: 200px;
-    border-radius: 12px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 25px;
+  background-color: #c7c7c7;
+  height: 200px;
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
 }
 
 .play-button {
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: var(--text-dark);
-    cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--text-dark);
+  cursor: pointer;
 }
 
 .video-time {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: var(--white);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.8rem;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--white);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
 }
 
-/* --- Estilos Gerais de Card --- */
+/* --- Cards Gerais --- */
 .card {
-    background-color: var(--white);
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    overflow: hidden; /* Para o cabeçalho não sair da borda arredondada */
-    margin-bottom: 25px;
-    border: 1px solid var(--border-color);
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin-bottom: 25px;
+  border: 1px solid var(--border-color);
 }
 
-/* --- Card de Diagnóstico IA --- */
 .card-header {
-    background-color: #e0f2f1; /* Fundo verde claro */
-    color: var(--primary-teal);
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  background-color: #e0f2f1;
+  color: var(--primary-teal);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .card-header h3 {
-    font-size: 1rem;
-    font-weight: 600;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .card-body {
-    padding: 20px;
+  padding: 20px;
 }
 
+/* Texto de Sugestão */
 .suggestion-text {
-    font-size: 1.1rem;
-    margin-bottom: 25px;
-    color: var(--text-dark);
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: var(--text-dark);
 }
 
 .suggestion-text .highlight {
-    color: var(--primary-teal);
-    font-weight: 600;
+  color: var(--primary-teal);
+  font-weight: 600;
 }
 
-/* Barra de Confiança */
+/* Seção de Confiança (Barra de Progresso) */
 .confidence-section {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 
 .confidence-labels {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
-    color: var(--text-gray);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: var(--text-gray);
 }
 
 .confidence-value {
-    font-weight: bold;
-    color: var(--text-dark);
+  font-weight: bold;
+  color: var(--text-dark);
 }
 
 .progress-track {
-    background-color: #eceff1;
-    height: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 5px;
+  background-color: #eceff1;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 5px;
 }
 
 .progress-fill {
-    background-color: var(--primary-teal);
-    height: 100%;
-    border-radius: 5px;
+  background-color: var(--primary-teal);
+  height: 100%;
+  border-radius: 5px;
 }
 
 .confidence-status {
-    font-size: 0.85rem;
-    color: var(--primary-teal);
-    font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--primary-teal);
+  font-weight: 600;
 }
 
 /* Box de Garantia */
 .warranty-box {
-    background-color: #e8f5e9; /* Fundo verde bem claro */
-    border: 1px solid #c8e6c9;
-    padding: 15px;
-    border-radius: 8px;
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
+  background-color: #e8f5e9;
+  border: 1px solid #c8e6c9;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .warranty-box i {
-    color: var(--success-green);
-    font-size: 0.8rem;
-    margin-top: 5px;
+  color: var(--success-green);
+  font-size: 0.8rem;
+  margin-top: 5px;
 }
 
 .warranty-box strong {
-    color: var(--success-green);
-    display: block;
-    margin-bottom: 3px;
+  color: var(--success-green);
+  display: block;
+  margin-bottom: 3px;
 }
 
 .warranty-box p {
-    font-size: 0.9rem;
-    color: var(--text-gray);
+  font-size: 0.9rem;
+  color: var(--text-gray);
+}
+
+/* --- Box de Mensagem do Cliente --- */
+.message-box {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.user-avatar-mini {
+  width: 32px;
+  height: 32px;
+  background-color: var(--primary-teal);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.user-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-meta .name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.user-meta .date {
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.message-content p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* --- Botões de Ação --- */
 .actions-row {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 30px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 .btn {
-    flex: 1; /* Ocupam o mesmo espaço */
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-align: center;
+  flex: 1;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: center;
 }
 
 .btn-outline {
-    background-color: transparent;
-    border: 2px solid var(--primary-teal);
-    color: var(--primary-teal);
+  background-color: transparent;
+  border: 2px solid var(--primary-teal);
+  color: var(--primary-teal);
 }
 
 .btn-solid {
-    background-color: var(--primary-teal);
-    border: 2px solid var(--primary-teal);
-    color: var(--white);
+  background-color: var(--primary-teal);
+  border: 2px solid var(--primary-teal);
+  color: var(--white);
 }
 
 /* --- Accordions (Menus Expansíveis) --- */
 .accordion-group {
-    background-color: var(--white);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
 }
 
 .accordion-item {
-    border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .accordion-item:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .accordion-header {
-    width: 100%;
-    padding: 18px 20px;
-    background: none;
-    border: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 1rem;
-    color: var(--text-dark);
-    cursor: pointer;
-    text-align: left;
+  width: 100%;
+  padding: 18px 20px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  text-align: left;
 }
 
 .accordion-header i {
-    color: var(--text-gray);
-    transition: transform 0.3s ease;
+  color: var(--text-gray);
+  transition: transform 0.3s ease;
 }
 
-/* Classe adicionada pelo JS quando está aberto */
 .accordion-header.active i {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
-/* Conteúdo do accordion (escondido por padrão) */
 .accordion-content {
-    display: none; /* Escondido */
-    padding: 20px;
-    background-color: #fafafa;
-    color: var(--text-gray);
-    font-size: 0.95rem;
-    border-top: 1px solid #f0f0f0;
+  display: none;
+  padding: 20px;
+  background-color: #fafafa;
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  border-top: 1px solid #f0f0f0;
 }

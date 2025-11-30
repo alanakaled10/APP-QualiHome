@@ -1,302 +1,308 @@
-/* --- VARIÁVEIS PRO --- */
 :root {
-    --pro-primary: #e0fcf6;
-    --pro-secundary: #009688;
-    --pro-bg-light: #f8f9fa;
-    --priority-high: #e74c3c;
-    --priority-medium: #f39c12;
+  --pro-primary: #4a6cf7;
+  --pro-secundary: #1565C0;
+  --pro-bg-light: #f8f9fa;
+  --priority-high: #e74c3c;
+  --priority-medium: #f39c12;
+  --priority-off: #009688;
 }
 
-/* --- HEADER DA FILA --- */
+/* --- Header da Fila --- */
 .pro-header {
-    background-color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #eee;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
 }
 
 .header-title h1 {
-    font-size: 20px;
-    margin: 0;
-    color: #333;
+  font-size: 20px;
+  margin: 0;
+  color: #333;
 }
 
 .status-badge {
-    font-size: 12px;
-    padding: 4px 8px;
-    border-radius: 12px;
-    margin-left: 8px;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-left: 8px;
 }
 
 .status-badge.online {
-    background-color: #e6fffa;
-    color: #00c7a5;
+  background-color: #e6fffa;
+  color: #00c7a5;
 }
 
 .header-actions .icon-btn {
-    background: none;
-    border: none;
-    font-size: 18px;
-    color: #666;
-    margin-left: 15px;
-    cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #666;
+  margin-left: 15px;
+  cursor: pointer;
 }
 
-/* --- ABAS DE NAVEGAÇÃO --- */
+/* --- Abas de Navegação --- */
 .chat-tabs {
-    display: flex;
-    background: #fff;
-    padding: 10px 20px 0;
-    border-bottom: 1px solid #eee;
+  display: flex;
+  background: #fff;
+  padding: 10px 20px 0;
+  border-bottom: 1px solid #eee;
 }
 
 .tab-btn {
-    background: none;
-    border: none;
-    padding: 10px 15px;
-    font-weight: 600;
-    color: #666;
-    cursor: pointer;
-    border-bottom: 3px solid transparent;
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
 }
 
 .tab-btn.active {
-    color: var(--pro-secundary);
-    border-bottom-color: var(--pro-secundary);
+  color: var(--pro-secundary);
+  border-bottom-color: var(--pro-secundary);
 }
 
-/* --- LISTA DE TICKETS --- */
+/* --- Lista de Tickets --- */
 .ticket-list {
-    padding: 15px;
-    background-color: var(--pro-bg-light);
-    flex: 1;
-    overflow-y: auto;
+  padding: 15px;
+  background-color: var(--pro-bg-light);
+  flex: 1;
+  overflow-y: auto;
 }
 
 .ticket-card {
-    background: #fff;
-    border-radius: 12px;
-    padding: 15px;
-    display: flex;
-    gap: 15px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-    position: relative;
-    border-left: 4px solid transparent;
-    /* Borda para prioridade */
-    transition: transform 0.1s;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  position: relative;
+  border-left: 4px solid transparent;
+  transition: transform 0.1s;
 }
 
 .ticket-card:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 /* Cores de Prioridade */
 .priority-high {
-    border-left-color: var(--priority-high);
+  border-left-color: var(--priority-high);
 }
 
 .priority-medium {
-    border-left-color: var(--priority-medium);
+  border-left-color: var(--priority-medium);
+}
+
+.priority-off{
+  border-left-color: var(--priority-off);
 }
 
 .user-avatar {
-    width: 45px;
-    height: 45px;
-    background-color: #e0e0e0;
-    color: #666;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background-color: #e0e0e0;
+  color: #666;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .ticket-info {
-    flex: 1;
+  flex: 1;
 }
 
 .info-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
 }
 
 .info-header h3 {
-    margin: 0;
-    font-size: 16px;
-    color: #333;
+  margin: 0;
+  font-size: 16px;
+  color: #333;
 }
 
 .ticket-time {
-    font-size: 12px;
-    color: #999;
+  font-size: 12px;
+  color: #999;
 }
 
 .last-message {
-    margin: 0 0 10px;
-    font-size: 14px;
-    color: #666;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 250px;
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
 }
 
 .last-message i {
-    font-size: 12px;
-    margin-right: 5px;
+  font-size: 12px;
+  margin-right: 5px;
 }
 
 .ticket-tags {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 }
 
 .tag {
-    font-size: 11px;
-    padding: 3px 8px;
-    border-radius: 6px;
-    font-weight: 500;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 500;
 }
 
 .tag-unit {
-    background-color: #f0f2f5;
-    color: #666;
+  background-color: #f0f2f5;
+  color: #666;
 }
 
 .tag-new {
-    background-color: #ffecec;
-    color: var(--priority-high);
+  background-color: #ffecec;
+  color: var(--priority-high);
 }
 
 .tag-pending {
-    background-color: #fff4e6;
-    color: var(--priority-medium);
+  background-color: #fff4e6;
+  color: var(--priority-medium);
+}
+
+.tag-ok{
+  background-color: #0096873c;
+  color: var(--priority-off);
 }
 
 .unread-indicator {
-    width: 10px;
-    height: 10px;
-    background-color: var(--pro-primary);
-    border-radius: 50%;
-    position: absolute;
-    top: 15px;
-    right: 15px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--pro-primary);
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
-/* --- ESTILOS ESPECÍFICOS DO CHAT PRO --- */
-
+/* --- Estilos Específicos do Chat Pro --- */
 .pro-chat-header {
-    border-bottom: 1px solid #eee;
-    box-shadow: none;
-    /* Remove a sombra do original para um look mais limpo */
+  border-bottom: 1px solid #eee;
+  box-shadow: none;
 }
 
 .user-avatar-small {
-    width: 35px;
-    height: 35px;
-    background-color: #ccc;
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: bold;
+  width: 35px;
+  height: 35px;
+  background-color: #ccc;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .ticket-info-header h3 {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .ticket-info-header span {
-    color: #999;
-    font-weight: normal;
+  color: #999;
+  font-weight: normal;
 }
 
-
-
-/* Mensagem Enviada pelo Pro (Muda a cor para azul) */
+/* Mensagem Enviada pelo Pro */
 .pro-sent .msg-bubble {
-    background-color: var(--pro-primary);
-    color: #111;
+  background-color: var(--pro-primary);
+  color: #fff;
 }
 
 .pro-sent .msg-time {
-    color: #111;
+  color: #fff;
 }
 
 /* Área de Input Pro */
 .pro-input-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    z-index: 20;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 20;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .quick-replies {
-    display: flex;
-    gap: 8px;
-    padding: 10px 15px 0;
-    overflow-x: auto;
-    white-space: nowrap;
-    /* Esconde a barra de rolagem */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+  display: flex;
+  gap: 8px;
+  padding: 10px 15px 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .quick-replies::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .chip {
-    background: #f0f2f5;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 16px;
-    font-size: 13px;
-    color: #333;
-    cursor: pointer;
-    flex-shrink: 0;
+  background: #f0f2f5;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .chip:hover {
-    background-color: #e4e6e9;
+  background-color: #e4e6e9;
 }
 
 .pro-input-area {
-    position: relative;
-    bottom: auto;
-    background: transparent;
-    padding-bottom: 15px;
+  position: relative;
+  bottom: auto;
+  background: transparent;
+  padding-bottom: 15px;
 }
 
 .input-wrapper textarea {
-    width: 100%;
-    padding: 12px 0;
-    border: none;
-    outline: none;
-    font-size: 14px;
-    font-family: inherit;
-    resize: none;
-    max-height: 100px;
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+  resize: none;
+  max-height: 100px;
 }
 
 .btn-toggle-mode {
-    width: 40px;
-    height: 40px;
-    border: none;
-    background: transparent;
-    color: #999;
-    font-size: 18px;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: #999;
+  font-size: 18px;
+  cursor: pointer;
 }
 
+.btn-send {
+  background-color: var(--pro-primary);
+}

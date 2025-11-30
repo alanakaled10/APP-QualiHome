@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QualiPro - Agenda da Equipe</title>
-    
+
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/agenda.css">
 </head>
+
 <body>
 
     <header>
-        <h1>Quali<span>Pro</span></h1>
-        <h2>Agenda da Equipe</h2>
+        <div>
+            <h1>Quali<span>Pro</span></h1>
+            <h2>Agenda da Equipe</h2>
+        </div>
     </header>
 
     <div class="date-navigator">
         <button id="prev-day-btn">
             <i class="ph ph-caret-left"></i>
         </button>
-        
+
         <div class="current-date">
             <i class="ph ph-calendar-blank"></i>
             <span id="date-display">Hoje, 25 Nov</span>
         </div>
-        
+
         <button id="next-day-btn">
             <i class="ph ph-caret-right"></i>
         </button>
     </div>
 
     <main class="main-container">
-        
+
         <div class="calendar-scroll-container">
-            
+            <div class="status-legend">
+                <span class="dot urgent"></span> Urgente
+                <span class="dot normal"></span> Normal
+                <span class="dot done"></span> Concluído
+            </div>
+
             <div class="calendar-grid">
 
                 <div class="grid-header-cell empty-corner"></div>
@@ -50,10 +60,7 @@
                 <div class="grid-header-cell">17h</div>
                 <div class="grid-header-cell">18h</div>
 
-                <div class="technician-cell row-paulo">
-                    <div class="avatar purple">P</div>
-                    <span>Paulo</span>
-                </div>
+                
                 <div class="grid-cell row-paulo"></div>
                 <div class="grid-cell row-paulo"></div>
                 <div class="grid-cell row-paulo"></div>
@@ -73,10 +80,6 @@
                 </div>
 
 
-                <div class="technician-cell row-maria">
-                    <div class="avatar teal">M</div>
-                    <span>Maria</span>
-                </div>
                 <div class="grid-cell row-maria"></div>
                 <div class="grid-cell row-maria"></div>
                 <div class="grid-cell row-maria"></div>
@@ -94,7 +97,9 @@
                     <span>Unidade 101</span>
                 </div>
 
-            </div> </div> <div class="hint-text">
+            </div>
+        </div>
+        <div class="hint-text">
             Arraste horizontalmente para ver mais horários • Espaços vazios indicam disponibilidade
         </div>
 
@@ -128,4 +133,5 @@
     <script src="js/agenda.js"></script>
 
 </body>
+
 </html>

@@ -49,7 +49,7 @@ h2 {
 
 /* --- CARD DESTINATÁRIO --- */
 .recipient-card {
-    background: #f0fdfa; /* Verde bem clarinho */
+    background: #f0fdfa; 
     border: 1px solid #ccfbf1;
     border-radius: 12px;
     padding: 15px;
@@ -67,7 +67,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #00c7a5; /* Cor Principal */
+    color: #00c7a5; 
 }
 
 .label-text {
@@ -102,7 +102,7 @@ h2 {
     transition: 0.3s;
 }
 
-/* Estado Ativo do Chip (Selecionado) */
+
 .chip.active {
     background-color: #00c7a5;
     color: white;
@@ -131,7 +131,7 @@ h2 {
 
 .textarea-input {
     height: 100px;
-    resize: none; /* Impede redimensionar */
+    resize: none; 
 }
 
 /* BOTÃO UPLOAD FOTO */
@@ -155,7 +155,7 @@ h2 {
     border-color: #bbb;
 }
 
-/* BOTÃO ENVIAR */
+
 .btn-submit {
     width: 100%;
     padding: 15px;
@@ -215,7 +215,7 @@ h2 {
 }
 
 .ticket-arrow {
-    margin-left: auto; /* Empurra a seta para a direita */
+    margin-left: auto; 
     color: #ccc;
     font-size: 12px;
 }
@@ -252,7 +252,6 @@ h2 {
     margin-bottom: 2px;
 }
 
-/* Estilo do item ativo */
 .active-menu {
     color: #00c7a5;
 }

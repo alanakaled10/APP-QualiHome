@@ -1,311 +1,245 @@
-/* --- RESET E VARIÁVEIS (Padrão QualiPro) --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+:root {
+  --primary-color: #1565C0;
+  --bg-color: #f4f7f6;
+  --white: #ffffff;
+  --text-dark: #333;
+  --text-light: #999;
+  --border-color: #e0e0e0;
+  --nav-bg: #2978ffde;
+  --event-red-bg: #ff3b3b;
+  --event-blue-bg: #2979ff;
+  --avatar-purple: #ab47bc;
 }
 
-:root {
-    --primary-color: #009688;
-    --bg-color: #f4f7f6;
-    --white: #ffffff;
-    --text-dark: #333;
-    --text-light: #999;
-    --border-color: #e0e0e0;
-
-    /* Cores específicas da agenda */
-    --event-red-bg: #ff3b3b;
-    --event-blue-bg: #2979ff;
-    --avatar-purple: #ab47bc;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-dark);
-    /* Espaço extra no final para o menu não cobrir o conteúdo e a dica */
-    padding-bottom: 120px;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  padding-bottom: 120px;
 }
 
-/* --- HEADER --- */
+/* --- Header --- */
 header {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 15px 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 15px 20px;
 }
 
 header h1 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: rgb(28, 28, 132);
-    
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(28, 28, 132);
 }
 
-header span{
-    color:  rgb(196, 124, 29);
+header span {
+  color: rgb(196, 124, 29);
 }
-
 
 header h2 {
-    font-size: 1.1rem;
-    opacity: 0.8;
-    font-weight: normal;
-    
+  font-size: 1.1rem;
+  opacity: 0.8;
+  font-weight: normal;
 }
 
-/* --- NAVEGADOR DE DATA (Barra Verde) --- */
+/* --- Navegador de Data --- */
 .date-navigator {
-    background-color: #26a69a;
-    /* Um tom ligeiramente diferente do header, conforme imagem */
-    color: var(--white);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  color: var(--text-dark);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .date-navigator button {
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 5px;
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
 }
 
 .current-date {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 600;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-/* --- CONTAINER PRINCIPAL --- */
 .main-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 0;
-    /* Padding zero nas laterais para a agenda encostar na borda no mobile */
+  margin: 0 20px;
+  padding: 20px 0;
 }
 
-/* --- AGENDA - CONTAINER DE ROLAGEM --- */
+/* Container de Rolagem Horizontal */
 .calendar-scroll-container {
-    /* Permite rolar horizontalmente se a grade for maior que a tela */
-    overflow-x: auto;
-    background: var(--white);
-    border-top: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-    /* Suaviza a rolagem no iOS */
-    -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  background: var(--white);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  -webkit-overflow-scrolling: touch;
 }
 
-/* --- AGENDA - A GRADE (CSS GRID) --- */
+/* --- Grid da Agenda --- */
 .calendar-grid {
-    display: grid;
-    /* Define as colunas:
-       - A 1ª coluna (técnicos) tem 70px fixos e fica "grudada" na esquerda (sticky).
-       - As outras 11 colunas (horários das 8h as 18h) têm no mínimo 80px cada.
-    */
-    grid-template-columns: 70px repeat(11, minmax(80px, 1fr));
-
-    /* Define as linhas (auto para cabeçalho, tamanho fixo para técnicos) */
-    grid-template-rows: auto repeat(2, 80px);
-
-    position: relative;
-    min-width: 950px;
-    /* Garante uma largura mínima para forçar a rolagem em telas pequenas */
+  display: grid;
+  grid-template-columns: 70px repeat(11, minmax(80px, 1fr));
+  grid-template-rows: auto repeat(2, 80px);
+  position: relative;
+  min-width: 950px;
 }
 
-/* Estilo das células do cabeçalho (Horários) */
 .grid-header-cell {
-    padding: 15px 5px;
-    text-align: center;
-    font-size: 0.85rem;
-    color: var(--text-light);
-    border-bottom: 1px solid var(--border-color);
-    border-right: 1px solid #f0f0f0;
-    background: var(--white);
+  padding: 15px 5px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-light);
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid #f0f0f0;
+  background: var(--white);
 }
 
-/* A primeira célula do cabeçalho (canto vazio) deve ficar fixa */
+
 .empty-corner {
-    position: sticky;
-    left: 0;
-    z-index: 3;
-    background: var(--white);
-    border-right: 1px solid var(--border-color);
+  position: sticky;
+  left: 0;
+  z-index: 3;
+  background: var(--white);
+  border-right: 1px solid var(--border-color);
 }
 
-/* --- COLUNA DOS TÉCNICOS (Esquerda) --- */
-.technician-cell {
-    /* Faz essa coluna ficar fixa ao rolar horizontalmente */
-    position: sticky;
-    left: 0;
-    z-index: 2;
-    /* Fica acima das células normais, abaixo dos eventos */
-    background: var(--white);
-    border-right: 1px solid var(--border-color);
-    border-bottom: 1px solid var(--border-color);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-}
-
-.technician-cell span {
-    font-size: 0.8rem;
-    margin-top: 5px;
-    color: var(--text-dark);
-}
-
-/* Avatares */
-.avatar {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
-.avatar.purple {
-    background-color: var(--avatar-purple);
-}
-
-.avatar.teal {
-    background-color: var(--primary-color);
+.grid-header-cell {
+  padding: 15px 5px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+  border-bottom: 2px solid #eee;
+  border-right: 1px dashed #eee;
+  background: var(--white);
 }
 
 
-/* --- CÉLULAS DA GRADE (Fundo) --- */
 .grid-cell {
-    border-right: 1px solid #f5f5f5;
-    border-bottom: 1px solid #f5f5f5;
-    background: var(--white);
+  border-right: 1px dashed #eee;
+  border-bottom: 1px solid #f0f0f0;
+  background: var(--white);
+  position: relative;
 }
 
-/* Destaque sutil para colunas alternadas (opcional, melhora leitura) */
-.grid-cell:nth-child(even) {
-    background-color: #fafafa;
+.grid-cell:nth-child(even),
+.technician-cell:nth-child(even) {
+  background-color: #fafafa;
 }
 
 
-/* --- EVENTOS (Os blocos coloridos) --- */
 .event {
-    margin: 8px 2px;
-    /* Um pequeno espaço para não grudar nas linhas */
-    padding: 8px 12px;
-    border-radius: 6px;
-    color: var(--white);
-    font-size: 0.8rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    /* Garante que fique acima das linhas da grade */
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    /* Se o texto for longo */
+  margin: 4px 2px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: var(--text-dark);
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  font-size: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
 }
 
-.event strong {
-    display: block;
-    font-size: 0.9rem;
-    margin-bottom: 2px;
+.event:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
-/* Cores dos Eventos */
 .event-red {
-    background-color: var(--event-red-bg);
+  border-left-color: var(--event-red-bg);
+  background-color: #fff5f5;
+
+}
+
+.event-red strong {
+  color: var(--event-red-bg);
 }
 
 .event-blue {
-    background-color: var(--event-blue-bg);
+  border-left-color: var(--event-blue-bg);
+  background-color: #f0f7ff;
 }
 
-/* Tag de Urgente */
+.event-blue strong {
+  color: var(--event-blue-bg);
+}
+
 .tag-urgent {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.65rem;
-    margin-top: 4px;
-    width: fit-content;
+  background-color: var(--event-red-bg);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  margin-top: 5px;
+  align-self: flex-start;
 }
 
-/* --- DICA DE RODAPÉ --- */
 .hint-text {
-    text-align: center;
-    font-size: 0.75rem;
-    color: var(--text-light);
-    padding: 15px;
-    background: var(--white);
-    margin-top: 15px;
-    border-radius: 8px;
-    border: 1px solid var(--border-color);
-    margin-left: 20px;
-    margin-right: 20px;
-    /* Margem lateral no mobile */
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  padding: 15px;
+  background: var(--white);
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-
-/* --- MENU INFERIOR (Igual aos anteriores) --- */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: var(--white);
-    border-top: 1px solid var(--border-color);
+.status-legend {
+    padding: 15px 20px;
     display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-    z-index: 100;
+    gap: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
 }
 
-.nav-item {
+.status-legend span {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    text-decoration: none;
-    color: #999;
-    font-size: 0.75rem;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #555;
 }
 
-.nav-item i {
-    font-size: 1.5rem;
-    margin-bottom: 4px;
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-.nav-item.active,
-.nav-item:hover {
-    color: var(--primary-color);
+.dot.urgent {
+  background: var(--event-red-bg);
 }
 
-/* --- RESPONSIVIDADE (Ajustes para PC) --- */
-@media (min-width: 768px) {
-
-    /* No PC, a dica pode ficar alinhada à esquerda e sem borda */
-    .hint-text {
-        text-align: left;
-        border: none;
-        background: transparent;
-        padding-left: 0;
-    }
-
-    /* Aumenta a altura das linhas no PC para ficar mais espaçado */
-    .calendar-grid {
-        grid-template-rows: auto repeat(2, 100px);
-    }
+.dot.normal {
+  background: var(--event-blue-bg);
 }
+
+.dot.done {
+  background: var(--primary-color);
+}
+

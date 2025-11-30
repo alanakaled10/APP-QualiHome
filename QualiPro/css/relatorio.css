@@ -1,4 +1,4 @@
-/* --- RESET E VARIÁVEIS (Padrão QualiPro) --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -7,14 +7,12 @@
 }
 
 :root {
-    --primary-color: #009688;
+    --primary-color: #1565C0;
     --bg-color: #f4f7f6;
     --white: #ffffff;
     --text-dark: #2c3e50;
     --text-light: #95a5a6;
     --border-color: #e0e0e0;
-
-    /* Cores do Gráfico */
     --chart-blue: #4285f4;
     --chart-yellow: #fbc02d;
     --chart-red: #ea4335;
@@ -57,7 +55,6 @@ header h2 {
     margin: 0 auto;
     background-color: var(--white);
     min-height: 100vh;
-    /* Preenche a altura em telas grandes */
 }
 
 /* --- NAVEGAÇÃO DE ABAS (TABS) --- */
@@ -80,7 +77,7 @@ header h2 {
     font-weight: 500;
 }
 
-/* Barra inferior da aba ativa */
+
 .tab-btn.active {
     color: var(--primary-color);
 }
@@ -89,7 +86,6 @@ header h2 {
     content: '';
     position: absolute;
     bottom: -1px;
-    /* Fica exatamente sobre a linha da borda */
     left: 0;
     width: 100%;
     height: 3px;
@@ -124,14 +120,6 @@ section {
     height: 180px;
     border-radius: 50%;
     position: relative;
-
-    /* A MÁGICA DO CSS: Gradiente Cônico
-       Define as cores e onde elas param.
-       - Azul começa em 0% e vai até 15%
-       - Amarelo começa em 15% e vai até 40% (15 + 25)
-       - Vermelho começa em 40% e vai até 80% (40 + 40)
-       - Cinza começa em 80% e vai até 100%
-    */
     background: conic-gradient(var(--chart-blue) 0% 15%,
             var(--chart-yellow) 15% 40%,
             var(--chart-red) 40% 80%,
@@ -145,15 +133,12 @@ section {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* Centraliza */
     width: 110px;
-    /* Tamanho do buraco */
     height: 110px;
     background-color: var(--white);
     border-radius: 50%;
 }
 
-/* --- LEGENDA DO GRÁFICO --- */
 .legend-item {
     display: flex;
     justify-content: space-between;
@@ -174,7 +159,6 @@ section {
     color: var(--text-dark);
 }
 
-/* Pontinhos coloridos da legenda */
 .dot {
     width: 12px;
     height: 12px;
@@ -219,68 +203,28 @@ section {
     color: var(--text-light);
 }
 
-/* Fundo cinza da barra */
+
 .progress-bg {
     height: 8px;
     background-color: #f0f0f0;
     border-radius: 4px;
     overflow: hidden;
-    /* Garante que o preenchimento não vaze */
+
 }
 
-/* Preenchimento vermelho da barra */
 .progress-fill {
     height: 100%;
     background-color: var(--chart-red);
     border-radius: 4px;
-    /* A largura é definida no HTML via style="width: X%" */
+  
 }
 
 
-/* --- MENU INFERIOR (Padrão) --- */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: var(--white);
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
-    z-index: 100;
-}
-
-.nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #999;
-    font-size: 0.75rem;
-}
-
-.nav-item i {
-    font-size: 1.5rem;
-    margin-bottom: 4px;
-}
-
-.nav-item.active,
-.nav-item:hover {
-    color: var(--primary-color);
-}
-
-/* Ajuste para telas maiores */
 @media (min-width: 800px) {
     .container {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
         margin-top: 20px;
         border-radius: 8px;
         padding-bottom: 20px;
-    }
-
-    header {
-        border-radius: 8px 8px 0 0;
     }
 }

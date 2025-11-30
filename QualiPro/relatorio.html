@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QualiPro - Relatórios</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/relatorio.css">
 </head>
+
 <body>
 
     <header>
-        <h1>Quali<span>Pro</span></h1>
-        <h2>Relatórios</h2>
+        <div>
+            <h1>Quali<span>Pro</span></h1>
+            <h2>Relatórios</h2>
+        </div>
     </header>
 
     <main class="container">
-        
+
         <div class="tabs-container">
             <button class="tab-btn active">Este Mês</button>
             <button class="tab-btn">Este Ano</button>
@@ -24,18 +29,18 @@
 
         <section class="chart-section">
             <h3 class="section-title">Top Ofensores por Categoria</h3>
-            
+
             <div class="chart-wrapper">
                 <div class="donut-chart"></div>
             </div>
 
             <div class="chart-legend">
                 <div class="legend-item">
-                   <div class="legend-left">
-                       <span class="dot blue"></span>
-                       <span>Acabamento</span>
-                   </div>
-                   <span class="percentage">15%</span>
+                    <div class="legend-left">
+                        <span class="dot blue"></span>
+                        <span>Acabamento</span>
+                    </div>
+                    <span class="percentage">15%</span>
                 </div>
                 <div class="legend-item">
                     <div class="legend-left">
@@ -43,30 +48,30 @@
                         <span>Elétrica</span>
                     </div>
                     <span class="percentage">25%</span>
-                 </div>
-                 <div class="legend-item">
+                </div>
+                <div class="legend-item">
                     <div class="legend-left">
                         <span class="dot red"></span>
                         <span>Hidráulica</span>
                     </div>
                     <span class="percentage">40%</span>
-                 </div>
-                 <div class="legend-item">
+                </div>
+                <div class="legend-item">
                     <div class="legend-left">
                         <span class="dot gray"></span>
                         <span>Outros</span>
                     </div>
                     <span class="percentage">20%</span>
-                 </div>
+                </div>
             </div>
         </section>
 
 
         <section class="ranking-section">
             <h3 class="section-title">Ranking de Falhas de Materiais (Top 5)</h3>
-            
+
             <div class="ranking-list">
-                
+
                 <div class="ranking-item">
                     <div class="item-header">
                         <span class="item-name">1. Torneira Marca X</span>
@@ -103,7 +108,7 @@
                         <span class="item-count">18 falhas</span>
                     </div>
                     <div class="progress-bg">
-                         <div class="progress-fill" style="width: 35%;"></div>
+                        <div class="progress-fill" style="width: 35%;"></div>
                     </div>
                 </div>
 
@@ -113,7 +118,7 @@
                         <span class="item-count">15 falhas</span>
                     </div>
                     <div class="progress-bg">
-                         <div class="progress-fill" style="width: 29%;"></div>
+                        <div class="progress-fill" style="width: 29%;"></div>
                     </div>
                 </div>
 
@@ -146,7 +151,8 @@
             <span>Relatórios</span>
         </a>
 
-    <script src="js/relatorio.js"></script>
+        <script src="js/relatorio.js"></script>
 
 </body>
+
 </html>

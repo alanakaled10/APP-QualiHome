@@ -1,19 +1,51 @@
-function continuar() {
-    let email = document.getElementById("email").value;
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- Lógica de Login ---
+    const loginForm = document.getElementById('loginForm');
 
-    if (email === "") {
-        alert("Por favor, digite um e-mail.");
-    } else {
-        window.location.href = "home.html";
-    }
-}
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (username && password) {
+            // Efeito visual no botão
+            const btn = document.querySelector('.btn');
+            const originalText = btn.innerText;
+            btn.innerText = 'Entrando...';
+            
+            // Simulação de redirecionamento
+            setTimeout(() => {
+                window.location.href = "home.html";
+            }, 800);
+        } else {
+            alert('Por favor, preencha usuário e senha.');
+        }
+    });
+
+    // --- Lógica de Mostrar/Ocultar Senha ---
+    const togglePass = document.getElementById('togglePassword');
+    const passInput = document.getElementById('password');
+
+    togglePass.addEventListener('click', () => {
+        // Alterna entre password e text
+        const type = passInput.getAttribute('type') === 'password' ? 'text' : 'password';
+        passInput.setAttribute('type', type);
+        
+        // Alterna o ícone
+        togglePass.classList.toggle('fa-eye');
+        togglePass.classList.toggle('fa-eye-slash');
+    });
+
+});
 
 
 // Script simples para simular interação nos botões
 document.querySelectorAll('.btn-action, .btn-detalhes').forEach(btn => {
     btn.addEventListener('click', () => {
         console.log('Botão clicado');
-        // Animação simples de clique
+       
         btn.style.transform = "scale(0.95)";
         setTimeout(() => {
             btn.style.transform = "scale(1)";
@@ -65,29 +97,28 @@ function goPerfil() {
     window.location.href = 'perfil.html';
 }
 
-// Função para selecionar o tipo de chamado (Solicitação, Problema, Dúvida)
+
 function selecionarTipo(elementoClicado) {
-    // 1. Remove a classe 'active' de todos os chips
+
     const todosChips = document.querySelectorAll('.chip');
     todosChips.forEach(chip => {
         chip.classList.remove('active');
     });
 
-    // 2. Adiciona a classe 'active' apenas no que foi clicado
+ 
     elementoClicado.classList.add('active');
 }
 
-// Função para mostrar o nome da foto quando o usuário escolhe um arquivo
+
 function atualizarNomeFoto() {
     const input = document.getElementById('inputFoto');
     const texto = document.getElementById('textoFoto');
 
-    // Verifica se algum arquivo foi selecionado
+
     if (input.files && input.files.length > 0) {
-        // Pega o nome do primeiro arquivo
+
         const nomeArquivo = input.files[0].name;
 
-        // Muda o texto do botão e a cor para indicar sucesso
         texto.innerText = nomeArquivo;
         texto.style.color = "#00c7a5";
         texto.style.fontWeight = "bold";

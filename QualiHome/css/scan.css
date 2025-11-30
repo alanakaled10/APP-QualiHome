@@ -1,5 +1,4 @@
-/* --- Sobrescritas da Página (Body e Container) --- */
-/* Fundo preto especificamente para a página da câmera */
+
 body.camera-page {
     background-color: #000;
 }
@@ -152,7 +151,7 @@ body.camera-page {
     display: flex; 
     justify-content: space-between; 
     align-items: center;
-    /* Assume padding vindo do css global se não sobrescrito aqui */
+   
 }
 
 .diagnosis-card {

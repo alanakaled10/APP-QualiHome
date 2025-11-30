@@ -1,79 +1,162 @@
-body {
-    font-family: Arial, sans-serif;
+:root {
+    /* Paleta Verde do QualiHome */
+    --primary-color: #009688; 
+    --primary-hover: #00796b;
+    --text-dark: #333;
+    --text-light: #666;
+    --white: #ffffff;
+}
+
+* {
     margin: 0;
     padding: 0;
-    background: #ffffff;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+/* Fundo com Imagem de Cidade */
+.main-background {
+    background-color: #66666633;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.container {
-    width: 100%;
-    max-width: 380px;
-    padding: 20px;
+/* O Cartão de Vidro (Glassmorphism) */
+.login-card {
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 30px;
+    border-radius: 16px;
     text-align: center;
+    
+    /* O Efeito Mágico */
+    background: rgba(255, 255, 255, 0.85); /* Branco translúcido */
+    backdrop-filter: blur(10px); /* Desfoque do fundo */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
 }
 
 .logo img {
-    width: 300px;
+    max-width: 180px;
+    margin-bottom: 10px;
 }
 
-.h2_home{
-    margin-top: 10px;
+.h2_home {
+    color: #1a1a1a;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
 }
 
 .subtitle {
-    font-size: 14px;
-    color: #666;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 25px;
+}
+
+/* --- Inputs Modernos --- */
+.input-wrapper {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-wrapper label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 5px;
+    display: block;
+    margin-left: 5px;
+}
+
+.icon-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.icon-input i:first-child {
+    position: absolute;
+    left: 15px;
+    color: #888;
+}
+
+.icon-input input {
+    width: 100%;
+    padding: 12px 12px 12px 40px; /* Espaço para o ícone */
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.icon-input input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.2); /* Glow verde */
+}
+
+/* Ícone de ver senha */
+.toggle-pass {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    color: #888;
+}
+.toggle-pass:hover { color: var(--primary-color); }
+
+/* --- Botões e Links --- */
+.actions {
+    display: flex;
+    justify-content: flex-end;
     margin-bottom: 20px;
 }
 
-input {
-    width: 93%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    font-size: 15px;
+.forgot-password {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .btn {
     width: 100%;
-    padding: 12px;
-    background: #000;
+    padding: 14px;
+    background: var(--primary-color);
     color: white;
     border: none;
     border-radius: 8px;
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    margin-bottom: 15px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 150, 136, 0.3);
 }
 
-.divider {
-    margin: 15px 0;
-    color: #777;
-    font-size: 14px;
-}
-
-.btn-social {
-    width: 100%;
-    background: #f2f2f2;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10px;
-    cursor: pointer;
-    font-size: 15px;
-    gap: 8px;
+.btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
 }
 
 .footer-text {
-    margin-top: 15px;
-    font-size: 12px;
+    margin-top: 25px;
+    font-size: 0.75rem;
     color: #888;
+    line-height: 1.5;
+}
+
+.footer-text a {
+    color: #555;
+    text-decoration: underline;
 }
