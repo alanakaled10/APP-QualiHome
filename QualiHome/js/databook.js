@@ -1,7 +1,7 @@
 // Banco de dados com as informações de cada cômodo
 const dadosSalas = {
     'cozinha': {
-        videoUrl: 'https://videos.pexels.com/video-files/4108620/4108620-hd_720_1280_25fps.mp4',
+        videoUrl: 'https://images.tcdn.com.br/img/img_prod/752045/armario_de_cozinha_completo_acacia_8_portas_salleto_10003225_variacao_15041_1_c13a0ee03b6fb8dd80004784a6a5eaf9.jpg',
         titulo: 'Dica: Organização de Armários',
         descricao: 'Mantenha sua cozinha prática e organizada com esses passos simples! 🍲',
         likes: '1.2k',
@@ -9,15 +9,14 @@ const dadosSalas = {
         shares: '34'
     },
     'banheiro': {
-        videoUrl: 'https://videos.pexels.com/video-files/7016259/7016259-hd_720_1280_25fps.mp4',
-        titulo: 'Limpeza Eficiente do Box',
+        videoUrl: 'https://blog.archtrends.com/wp-content/uploads/2025/07/banheiromodernoareadisponivel.jpeg',
         descricao: 'Truque caseiro para tirar manchas de água do vidro do box. ✨',
         likes: '3.5k',
         comentarios: '120',
         shares: '200'
     },
     'lavanderia': {
-        videoUrl: 'https://videos.pexels.com/video-files/6196207/6196207-hd_720_1280_25fps.mp4',
+        videoUrl: 'https://storage.panoverse-cdn.com.br/img.panorama/produto/106255/lavanderia-completa-sao-goncalo-4-portas-6-prateleiras-nature-off-white-kaiki-moveis-975846-1000x1000-cover.jpg',
         titulo: 'Cuidados com a Máquina',
         descricao: 'Como limpar o filtro da sua máquina de lavar para durar mais. 👕',
         likes: '850',
@@ -25,7 +24,7 @@ const dadosSalas = {
         shares: '12'
     },
     'quarto': {
-        videoUrl: 'https://videos.pexels.com/video-files/7579933/7579933-hd_720_1280_25fps.mp4',
+        videoUrl: 'https://cdn.assets-casacor.tec.br/file/casacor-images-news/2025/03/biblioteca-escondida-abriga-encontros-leitura-ape-estudio-elmor-credito-bia-nauiack-39.webp',
         titulo: 'Cama de Hotel em Casa',
         descricao: 'Aprenda a técnica para deixar sua cama esticadinha e aconchegante. 🛏️',
         likes: '2.1k',
@@ -33,7 +32,7 @@ const dadosSalas = {
         shares: '515'
     },
     'sala': {
-        videoUrl: 'https://videos.pexels.com/video-files/7534244/7534244-hd_720_1280_25fps.mp4',
+        videoUrl: 'https://finger.ind.br/wp-content/uploads/2021/08/post_thumbnail-a604185952a2859240903c1b2af3cd7c.jpg',
         titulo: 'Iluminação Aconchegante',
         descricao: 'Como usar luz indireta para transformar o clima da sua sala. 🛋️',
         likes: '1.8k',

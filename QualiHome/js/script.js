@@ -10,12 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
 
         if (username && password) {
-            // Efeito visual no botão
+         
             const btn = document.querySelector('.btn');
             const originalText = btn.innerText;
             btn.innerText = 'Entrando...';
-            
-            // Simulação de redirecionamento
+         
             setTimeout(() => {
                 window.location.href = "home.html";
             }, 800);
@@ -29,11 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const passInput = document.getElementById('password');
 
     togglePass.addEventListener('click', () => {
-        // Alterna entre password e text
+
         const type = passInput.getAttribute('type') === 'password' ? 'text' : 'password';
         passInput.setAttribute('type', type);
-        
-        // Alterna o ícone
+
         togglePass.classList.toggle('fa-eye');
         togglePass.classList.toggle('fa-eye-slash');
     });
